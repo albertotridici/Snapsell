@@ -1,6 +1,6 @@
 <div>
     @if (session()->has('message'))
-        <span class="alert alert-succes">
+        <span class="alert alert-success">
             {{session('message')}}
         </span>
     @endif
@@ -26,6 +26,16 @@
             @error('price')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
+        </div>
+        <div class="mb-3">
+            <label for="category">Categoria</label>
+            <select id="category" class="form-control" wire::model.defer>
+                <option value="">Scegli la categoria</option>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+            
+            </select>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

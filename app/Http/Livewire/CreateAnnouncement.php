@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Announcement;
+use App\Models\Category;
 use Livewire\Component;
 
 class CreateAnnouncement extends Component
@@ -11,11 +12,13 @@ class CreateAnnouncement extends Component
     public $title;
     public $description;
     public $price;
+    public $category;
 
     protected $rules = [
         'title'=>'required|min:5|max:10',
         'description'=>'required',
         'price'=>'required|numeric|regex:/^\d{1,6}(.\d{1,2})?$/',
+        'category'=>'required'
     ];
 
     protected $messages = [
@@ -24,7 +27,6 @@ class CreateAnnouncement extends Component
         'title.min'=>'il titolo è troppo corto',
         'title.max'=>'il titolo è troppo lungo',
         'price.regex'=>'inserisci un prezzo massimo di 999999,99'
-
     ];
 
     public function updated($propertyName){
@@ -32,13 +34,24 @@ class CreateAnnouncement extends Component
     }
 
     public function store(){
-        $this->validate();
-        Announcement::create([
+        
+    
+        // $this->validate();
+        
+        $category = Category::find($this->category);
+        dd($category);
+        
+        $category->announcements()->create([
             'title'=>$this->title,
             'description'=>$this->description,
-            'price'=>$this->price,
-
+            'price'=>$this->price
         ]);
+        // Announcement::create([
+        //     'title'=>$this->title,
+        //     'description'=>$this->description,
+        //     'price'=>$this->price,
+        //     'category_id'=>$category
+        // ]);
 
         session()->flash('message','annuncio inserito con successo!');
 
