@@ -1,6 +1,6 @@
 <div>
     @if (session()->has('message'))
-        <span class="alert alert-success">
+        <div class="alert alert-success">
             {{session('message')}}
         </div>
     @endif
@@ -28,7 +28,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="category">Categoria</label>
+            <label for="category" class="form-label">Categoria</label>
             <select id="category" class="form-control" wire:model.defer="category">
                 <option value="">Scegli la categoria</option>
                 @foreach ($categories as $category)

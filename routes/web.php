@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
-Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
+Route::middleware(['auth'])->group(function(){
+    Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
+});
