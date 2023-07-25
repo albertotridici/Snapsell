@@ -1,8 +1,8 @@
 <div>
     @if (session()->has('message'))
-        <span class="alert alert-succes">
+        <div class="alert alert-success">
             {{session('message')}}
-        </span>
+        </div>
     @endif
     <form wire:submit.prevent="store">
         @csrf
