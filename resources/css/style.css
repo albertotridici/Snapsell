@@ -1,107 +1,75 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.bg-image{
+    color: #00afb9 !important; 
+}
+nav a{
+    font-size: 20px !important;
+    color: #00afb9 !important; 
+}
+
+.custom{
+    height: 60px;
+}
+.h1-home{
+    font-size: 12vw;
+    text-shadow: 3px 3px 3px black;
+}
+.h2-home{
+    font-size: 3vw;
+    text-shadow: 3px 3px 3px black;
+}
+.h2-home-mus{
+    font-size: 3vw;
+    text-shadow: 1px 1px 1px black;
+}
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-custom1{
+    background-image: url(/public/img/guardaroba.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .img-custom2{
+    background-image: url(/public/img/tiziopesi.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .img-custom3{
+    background-image: url(/public/img/musica.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .img-custom4{
+    background-image: url(/public/img/lavoraconnoi.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  /* end swiper */
 
 
 :root{
@@ -112,13 +80,14 @@
     --col-start2: #c03cc0;
     --col-start3: #520852;
 }
-/* Start register-login */
+/* Start register-login --------------------------------------------------------------------------------------------------- */
 .bg-custom-rl{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #444;
+    margin-top: 50px;
+    /* background: #444; */
 }
 .container-custom{
     width: 70vw;
@@ -268,4 +237,4 @@ a {
     height: 35vh;
     margin-top: 30px;
 }
-/* End register-login */
+/* End register-login ----------------------------------------------------------------------------------------------------- */
