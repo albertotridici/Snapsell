@@ -73,5 +73,10 @@ a{
     background-position: center;
   }
 
+  .img-custom4{
+    background-image: url(/public/img/lavoraconnoi.jpg);
+    background-size: cover;
+    background-position: center;
+  }
   /* end swiper */
 
