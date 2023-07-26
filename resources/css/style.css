@@ -1,3 +1,77 @@
 *{
     font-family: 'Montserrat', sans-serif;
+    color: #00afb9; 
 }
+
+a{
+    color: #00afb9 !important; 
+    font-size: 20px !important;
+}
+
+.custom{
+    height: 60px;
+}
+
+
+
+.h1-home{
+    font-size: 12vw;
+    text-shadow: 3px 3px 3px black;
+}
+
+.h2-home{
+    font-size: 3vw;
+    text-shadow: 3px 3px 3px black;
+}
+
+.h2-home-mus{
+    font-size: 3vw;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+
+
+
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-custom1{
+    background-image: url(/public/img/guardaroba.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .img-custom2{
+    background-image: url(/public/img/tiziopesi.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .img-custom3{
+    background-image: url(/public/img/musica.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* end swiper */
+
