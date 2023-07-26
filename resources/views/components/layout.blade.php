@@ -12,5 +12,6 @@
     <x-navbar></x-navbar>
     {{$slot}}
     @livewireScripts
+    <script src="https://kit.fontawesome.com/2aed272892.js" crossorigin="anonymous"></script>
 </body>
 </html>

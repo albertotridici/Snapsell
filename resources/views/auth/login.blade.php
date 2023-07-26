@@ -1,30 +1,47 @@
 <x-layout>
-    <div class="container-fluid p-3 bg-success text-white">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="display-1">Accedi</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container p-4">
-        <div class="row justify-content-center">
-            <div class="col-6 bg-secondary text-white p-5 rounded-5">
-                <form method="POST" action="{{route('login')}}">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Utente</label>
-                        <input type="email" class="form-control" id="email" name="email">
+    <div class="bg-custom-rl">
+        <div class="container container-custom">
+            <div class="row h-100">
+                <div class="col-6 signin-signup signin">
+                    <form method="POST" action="{{route('login')}}" class="form">
+                        @csrf
+                        <h2 class="title">Accedi</h2>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn-rl">Accedi</button>
+                        <p class="social-text">Or Sign in with social platform</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <div class="panels-container panels-l col-6">
+                    <div class="panel">
+                        <div class="text-white">
+                            <h3>Non sei registrato?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolor, eos incidunt minima iure?</p>
+                            <a href="{{route('register')}}" class="btn-rl">Registrati</a>
+                        </div>
+                        <img src="./media/register2.svg" alt="" class="image">
                     </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                        <label for="remember" class="form-check-label">Ricordati di me</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>

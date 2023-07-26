@@ -1,34 +1,55 @@
 <x-layout>
-    <div class="container-fluid p-3 bg-info text-white">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="display-1">Registrati</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container p-4">
-        <div class="row justify-content-center">
-            <div class="col-6 bg-secondary text-white p-5 rounded-5">
-                <form method="POST" action="{{route('register')}}">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nome Utente</label>
-                        <input type="text" class="form-control" id="name" name="name">
+    <div class="bg-custom-rl">
+        <div class="container container-custom">
+            <div class="row h-100">
+                <div class="panels-container panels-r col-6">
+                    <div class="panel">
+                        <div class="text-white">
+                            <h3>Hai già un accaunt?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolor, eos incidunt minima iure?</p>
+                            <a href="{{route('login')}}" class="btn-rl">Accedi</a>
+                        </div>
+                        <img src="./media/login2.svg" alt="" class="image">
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Utente</label>
-                        <input type="email" class="form-control" id="email" name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Conferma Password</label>
-                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </div>
+                <div class="col-6 signin-signup signup">
+                    <form method="POST" action="{{route('register')}}" class="form">
+                        @csrf
+                        <h2 class="title">Registrati</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" placeholder="Username">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-unlock"></i>
+                            <input type="password" name="password_confirmation" placeholder="Confirm password">
+                        </div>
+                        <button type="submit" class="btn-rl">Registrati</button>
+                        <p class="social-text">Or Sign in with social platform</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
