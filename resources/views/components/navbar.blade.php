@@ -22,7 +22,7 @@
                             Benvenuto {{Auth::user()->name}}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Crea</a></li>
+                            <li><a class="dropdown-item" href="{{route('announcement.create')}}">Crea Annuncio</a></li>
                             <li><hr class="dropdown-divider"></li>
 
                             <li><a class="dropdown-item" role="button"
