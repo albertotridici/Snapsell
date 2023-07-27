@@ -25,10 +25,10 @@
                 </li>
             </ul>
             @guest
-                <div class="nav-item px-5">
+                <div class="nav-item px-4">
                     <a class="nav-link" href="{{route('register')}}">Registrati</a>
                 </div>
-                <div class="nav-item px-5">
+                <div class="nav-item px-4">
                     <a class="nav-link" href="{{route('login')}}">Accedi</a>
                 </div>
             @else                

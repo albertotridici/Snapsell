@@ -14,10 +14,10 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             
-            <div class="swiper-slide img-custom1 d-flex flex-column justify-content-center">
-              <h1 class="h1-home">SnapSell</h1>
-              <h2 class="h2-home mb-5">Trade, Click, Smile </h2>
-              <button>Inizia a vendere!</button>
+            <div class="swiper-slide img-custom1 d-flex flex-column justify-content-center ">
+              <h1 class="h1-home watch transition">SnapSell</h1>
+              <h2 class="h2-home mb-5 watch transition">Trade, Click, Smile </h2>
+              <a href="{{route('announcement.create')}}" class="watch transition btn btn-primary">Inizia a vendere!</a>
             </div>
             
             <div class="swiper-slide img-custom2 d-flex flex-column justify-content-center">
@@ -34,8 +34,8 @@
             
             <div class="swiper-slide img-custom4 d-flex flex-column justify-content-center">
               <h1 class="h1-home">SnapSell</h1>
-              <h2 class="h2-home-mus mb-5">Dai sfogo all'artista che è in te!</h2>
-              <button>Vai alla categoria.</button>
+              <h2 class="h2-home mb-5">Entra a far parte del team!</h2>
+              <button>Invia candidatura</button>
             </div>
           </div>
           <div class="swiper-button-next"></div>

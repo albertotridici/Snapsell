@@ -69,6 +69,23 @@ nav a{
     background-size: cover;
     background-position: center;
   }
+
+  .transition{
+    opacity: 0;
+    /* transform: translateX(-300px); */
+    /* appare dall'alto */
+    /* transform: translateY(-300px); */
+    /* appare dal nulla */
+    transform: scale(0.5);
+    transition: all 1.2s ease;
+}
+
+.transition.in-page{
+    opacity: 1;
+    /* transform: scale(1); */
+    /* transform: translateY(0px); */
+    transform: translateX(0px);
+}
   /* end swiper */
 
 
@@ -238,3 +255,5 @@ a {
     margin-top: 30px;
 }
 /* End register-login ----------------------------------------------------------------------------------------------------- */
+
+
