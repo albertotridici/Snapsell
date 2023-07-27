@@ -37,3 +37,5 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
     Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 });
+
+Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnouncements'])->name('announcements.search');

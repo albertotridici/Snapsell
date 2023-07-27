@@ -1,29 +1,35 @@
 <x-layout>
     <div class="container mt-5 pt-5">
-       <div class="row">
-           <div class="col-12 text-center">
-               <h1>Tutti gli annunci</h1>
-           </div>
-       </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Tutti gli annunci</h1>
+            </div>
+        </div>
     </div>
     <div class="container">
-       <div class="row">
-               @foreach ($announcements as $announcement)
-                   <div class="col-4">
-                       <div class="card shadow">
-                           <img src="https://picsum.photos/250" class="card-img-top" alt="foto">
-                           <div class="card-body">
-                             <h5 class="card-title">{{$announcement->title}}</h5>
-                             <p class="card-text">{{$announcement->description}}</p>
-                             <p class="card-text">{{$announcement->price}}</p>
-                             <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
-                             <a href="{{route('category.show', $announcement->category)}}" class="btn my-2 border-top pt-2 border-dark card-link shadow btn-success">Categoria : {{$announcement->category->name}}</a>
-                             <p class="card-footer">Pubblicato il : {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? ''}}</p>
-                           </div>
-                         </div>
-                   </div>
-               @endforeach
-               {{$announcements->links()}}
-       </div>
+        <div class="row">
+            @forelse ($announcements as $announcement)
+            <div class="col-4">
+                <div class="card shadow">
+                    <img src="https://picsum.photos/250" class="card-img-top" alt="foto">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$announcement->title}}</h5>
+                        <p class="card-text">{{$announcement->description}}</p>
+                        <p class="card-text">{{$announcement->price}}</p>
+                        <a href="{{route('announcement.show',compact('announcement'))}}" class="btn btn-primary shadow">Visualizza</a>
+                        <a href="{{route('category.show', $announcement->category)}}" class="btn my-2 border-top pt-2 border-dark card-link shadow btn-success">Categoria : {{$announcement->category->name}}</a>
+                        <p class="card-footer">Pubblicato il : {{$announcement->created_at->format('d/m/Y')}} - Autore: {{$announcement->user->name ?? ''}}</p>
+                    </div>
+                </div>
+            </div>
+            @empty
+            <div class="col-12">
+                <div class="alert alert-warning py-3 shadow">
+                    <p class="lead" >Non ci sono annunci per questa ricerca prova a cambiare target.</p>
+                </div>
+            </div>
+            @endforelse
+            {{$announcements->links()}}
+        </div>
     </div>
 </x-layout>
