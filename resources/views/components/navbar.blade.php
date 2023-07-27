@@ -58,6 +58,11 @@
                     </ul>
                 </div>
             @endguest
+            <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                @csrf
+                <input name="searched" class="form-control me-2" placeholder="search" aria-label="search" type="search">
+                <button class="btn btn-success" type="submit" >Cerca</button>
+            </form>
         </div>
     </div>
 </nav>
