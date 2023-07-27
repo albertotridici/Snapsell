@@ -44,8 +44,9 @@
       </div>
     </div>
   </div>
-  
-  <div class="container-fluid p-5">
+
+  {{-- Zona card -------------------------------------------------------------------------------------------------------- --}}
+  {{-- <div class="container-fluid p-5">
     <div class="row">
       @foreach ($announcements as $announcement)
       <div class="col-4">
@@ -63,5 +64,42 @@
       </div>
       @endforeach
     </div>
+  </div> --}}
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="img">
+          <img src="https://digitshack.com/codepen/mentor13/image-product-desktop.jpg" alt="">
+        </div>
+        <div class="card-content">
+          <h6 class="pro-cat">Perfume</h6>
+          <h2 class="pro-name">Gabrielle Essence Eau De Parfum</h2>
+          <p class="pro-des">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</p>
+          <div class="price">
+            <p class="current-price">$149.99</p>
+            <p class="old-price">$169.99</p>
+          </div>
+          <button class="cta"><img src="https://digitshack.com/codepen/mentor13/icon-cart.svg" alt="icon-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </x-layout>
+{{-- <div class="grid">
+  <div class="img">
+    <img src="https://digitshack.com/codepen/mentor13/image-product-desktop.jpg" alt="">
+  </div>
+  <div class="card-content">
+    <h6 class="pro-cat">Perfume</h6>
+    <h2 class="pro-name">Gabrielle Essence Eau De Parfum</h2>
+    <p class="pro-des">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the House of CHANEL.</p>
+    <div class="price">
+      <p class="current-price">$149.99</p>
+      <p class="old-price">$169.99</p>
+    </div>
+    <button class="cta"><img src="https://digitshack.com/codepen/mentor13/icon-cart.svg" alt="icon-cart">Add to Cart</button>
+  </div>
+</div> --}}
