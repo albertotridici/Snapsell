@@ -10,6 +10,16 @@
 </head>
 <body>
     <x-navbar></x-navbar>
+        @if (session()->has('access.denied'))
+            <div class="alert alert-success">
+                {{session('access.denied')}}
+            </div>
+        @endif
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{session('message')}}
+            </div>
+        @endif
     {{$slot}}
     
     @livewireScripts

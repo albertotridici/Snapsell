@@ -35,7 +35,7 @@
             <div class="swiper-slide img-custom4 d-flex flex-column justify-content-center">
               <h1 class="h1-home">SnapSell</h1>
               <h2 class="h2-home mb-5">Entra a far parte del team!</h2>
-              <button>Invia candidatura</button>
+              <a class="btn btn-primary" href="{{route('become.revisor')}}">Invia candidatura</a >
             </div>
           </div>
           <div class="swiper-button-next"></div>
