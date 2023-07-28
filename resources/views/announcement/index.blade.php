@@ -6,12 +6,12 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container py-5">
         <div class="row">
             @forelse ($announcements as $announcement)
-            <div class="col-4 p-3">
-                <x-card :announcement="$announcement"></x-card>
-            </div>
+                <div class="col-4 p-3 watch transition-card">
+                    <x-card :announcement="$announcement"></x-card>
+                </div>
             @empty
             <div class="col-12">
                 <div class="alert alert-warning py-3 shadow">
