@@ -6,11 +6,33 @@ use App\Models\User;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 class Announcement extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
     protected $fillable = ['title', 'description', 'price'];
+
+    // start accorciamento descrizione card
+    public function descSubstr(){
+        if(strlen($this->description) > 99){
+            return substr($this->description, 0, 100) . '...';
+        }else{
+            return $this->description;
+        }
+    }
+    // End accorciamento descrizione card
+
+    public function toSearchableArray(){
+        $category = $this->category;
+        $array = [
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'category' => $category,
+        ];
+        return $array;
+    }
 
     public function category(){
         return $this->belongsTo(Category::class);

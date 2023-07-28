@@ -10,7 +10,19 @@
 </head>
 <body>
     <x-navbar></x-navbar>
+        @if (session()->has('access.denied'))
+            <div class="alert alert-success">
+                {{session('access.denied')}}
+            </div>
+        @endif
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{session('message')}}
+            </div>
+        @endif
     {{$slot}}
+
+    <x-footer></x-footer>
     
     @livewireScripts
     <script src="https://kit.fontawesome.com/2aed272892.js" crossorigin="anonymous"></script>
