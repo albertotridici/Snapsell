@@ -16,7 +16,7 @@ class CreateAnnouncement extends Component
     public $category;
 
     protected $rules = [
-        'title'=>'required|min:5|max:10',
+        'title'=>'required|min:5',
         'description'=>'required',
         'price'=>'required|numeric|max:999999,99',
         'category'=>'required'

@@ -97,6 +97,14 @@ nav a{
     --col-start2: #c03cc0;
     --col-start3: #520852;
 }
+
+/* navbar */
+.bg-nav{
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+/* navbarend */
+
 /* Start register-login --------------------------------------------------------------------------------------------------- */
 .bg-custom-rl{
     display: flex;
