@@ -56,9 +56,9 @@
   <div class="container py-5">
     <div class="row">
       @foreach ($announcements as $announcement)
-      <div class="col-4 p-3 watch transition-card">
-        <x-card :announcement="$announcement"></x-card>
-      </div>
+        <div class="col-4 p-3 watch transition-card">
+          <x-card :announcement="$announcement"></x-card>
+        </div>
       @endforeach
     </div>
   </div>
