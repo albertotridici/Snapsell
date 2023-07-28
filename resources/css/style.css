@@ -96,6 +96,9 @@ nav a{
     --col-start: #df4adf;
     --col-start2: #c03cc0;
     --col-start3: #520852;
+    --col-start-card: hsl(158, 36%, 37%);
+    --col-start-card2: hsl(158, 36%, 23%);
+
 }
 
 /* navbar */
@@ -264,4 +267,141 @@ a {
 }
 /* End register-login ----------------------------------------------------------------------------------------------------- */
 
+/* Start ultimi sei annunci ----------------------------------------------------------------------------------------------- */
+.container-card{
+    border-radius: 15px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    height: 100%;
+}
 
+.img img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-content{
+    padding: 35px;
+}
+.pro-cat-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+.evidenziatore{
+    width: 0%;
+    margin: auto;
+    transform: translateY(0.5px);
+    height: 1px;
+    background-color: var(--col-vinted);
+    transition: all 0.3s ease-in-out;
+}
+.link-category-content:hover .evidenziatore{
+    width: 100%;
+}
+
+.pro-cat{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    margin: 0;
+}
+a.pro-cat:hover{
+    color: var(--col-vinted);
+}
+
+h2.pro-name{
+    font-size: 34px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+
+p.pro-des{
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6em;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+p.current-price{
+    color: var(--col-vinted-custom);
+    font-size: 25px;
+    padding-right: 25px;
+}
+
+a.cta{
+    background-color: var(--col-vinted-custom);
+    padding: 14px 0;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+a.cta:hover{
+    background-color: var(--col-vinted);
+}
+
+a.cta i{
+    padding-right: 10px;
+}
+
+/* @media only screen and (max-width: 628px){   //NON CANCELLARE !!!
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card-content{
+        display: block;
+    }
+    h6.pro-cat, h2.pro-name, p.pro-des, .price{
+        padding-bottom: 23px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .container{
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    .img img{
+        max-height: 290px;
+    }
+    .card-content{
+        padding: 24px;
+    }
+    h6.pro-cat, h2.pro-name, p.pro-des, .price{
+        padding-bottom: 16px;
+    }
+    h2.pro-name{
+        font-size: 28px;
+    }
+    p.pro-des{
+        font-size: 12px;
+    }
+    p.current-price{
+        font-size: 23px;
+    }
+    button.cta{
+        padding: 12px 0;
+        font-size: 13px;
+    }
+} */
+/* End ultimi sei annunci ----------------------------------------------------------------------------------------------- */

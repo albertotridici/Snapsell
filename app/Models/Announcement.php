@@ -10,8 +10,18 @@ use Laravel\Scout\Searchable;
 
 class Announcement extends Model
 {
-    use HasFactory,Searchable;
+    use HasFactory, Searchable;
     protected $fillable = ['title', 'description', 'price'];
+
+    // start accorciamento descrizione card
+    public function descSubstr(){
+        if(strlen($this->description) > 99){
+            return substr($this->description, 0, 100) . '...';
+        }else{
+            return $this->description;
+        }
+    }
+    // End accorciamento descrizione card
 
     public function toSearchableArray(){
         $category = $this->category;
@@ -21,7 +31,6 @@ class Announcement extends Model
             'description' => $this->description,
             'category' => $category,
         ];
-
         return $array;
     }
 
