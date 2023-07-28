@@ -274,7 +274,25 @@ a {
     overflow: hidden;
     height: 100%;
 }
-
+.img{
+    position: relative;
+}
+.auth-content{
+    position: absolute;
+    background-color: white;
+    bottom: -18px;
+    padding: 16px 35px 0 35px;
+    border-top-right-radius: 10px;
+    color: var(--col-vinted-custom);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+   
+}
+.auth-content p{
+    margin: 0;
+}
 .img img{
     width: 100%;
     max-height: 300px;
@@ -320,7 +338,11 @@ h2.pro-name{
     line-height: 1em;
     color: hsl(212, 21%, 14%);
 }
-
+.des-content{
+    height: 104.5px;
+    display: flex;
+    align-items: center;
+}
 p.pro-des{
     color: hsl(228, 12%, 48%);
     line-height: 1.6em;

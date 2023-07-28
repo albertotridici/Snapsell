@@ -57,26 +57,7 @@
     <div class="row">
       @foreach ($announcements as $announcement)
       <div class="col-4 p-3 watch">
-        <div class="container-card">
-          <div class="img">
-            <img src="https://digitshack.com/codepen/mentor13/image-product-desktop.jpg" alt="foto card">
-          </div>
-          <div class="card-content">
-            <div class="pro-cat-content">
-              <div class="link-category-content">
-                <a href="{{route('category.show', $announcement->category)}}" class="pro-cat">{{$announcement->category->name}}</a>
-                <div class="evidenziatore"></div>
-              </div>
-              <h6 class="pro-cat">{{$announcement->created_at->format('d/m/Y')}}</h6>
-            </div>
-            <h2 class="pro-name">{{$announcement->title}}</h2>
-            <p class="pro-des">{{$announcement->descSubstr()}}</p>
-            <div class="price">
-              <p class="current-price">€ {{$announcement->price}}</p>
-            </div>
-            <a href="{{route('announcement.show',compact('announcement'))}}" class="cta"><i class="fa-solid fa-paper-plane"></i>Scopri di più</a>
-          </div>
-        </div>
+        <x-card :announcement="$announcement"></x-card>
       </div>
       @endforeach
     </div>
