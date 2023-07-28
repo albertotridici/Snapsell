@@ -1,8 +1,12 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
+
+body{
+    background-color:rgb(244, 244, 244);
+}
 .bg-image{
-    color: #00afb9 !important; 
+    color: rgb(0, 175, 185) !important; 
 }
 nav a{
     font-size: 20px !important;
@@ -16,6 +20,11 @@ nav a{
     font-size: 12vw;
     text-shadow: 3px 3px 3px black;
 }
+
+.h1-viste{
+    font-size: 4vw;
+    text-shadow: 3px 3px 3px black;
+}
 .h2-home{
     font-size: 3vw;
     text-shadow: 3px 3px 3px black;
@@ -23,6 +32,12 @@ nav a{
 .h2-home-mus{
     font-size: 3vw;
     text-shadow: 1px 1px 1px black;
+}
+
+.sottotitoli{
+    font-size: 4vw;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 500;
 }
 /* swiper */
 .swiper {
@@ -70,6 +85,7 @@ nav a{
     background-position: center;
   }
 
+  /* h1 */
   .transition{
     opacity: 0;
     /* transform: translateX(-300px); */
@@ -86,7 +102,54 @@ nav a{
     /* transform: translateY(0px); */
     transform: translateX(0px);
 }
+
+.swiper-button{
+    background-color: var(--col-vinted-custom);
+    padding: 14px 0;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 200px;
+    display: block;
+    text-align: center;
+}
+
+.swiper-button:hover{
+    transition: background-color .3s ease;
+    background-color: var(--col-vinted);
+}
+
+.swiper-button i{
+    padding-right: 10px;
+}
+
+
   /* end swiper */
+
+
+/* card-transition */
+
+.transition-card{
+    opacity: 0;
+    /* transform: translateX(-300px); */
+    /* appare dall'alto */
+    transform: translateY(-200px);
+    /* appare dal nulla */
+    /* transform: scale(0.5); */
+    transition: all 1.2s ease;
+}
+
+.transition-card.in-page{
+    opacity: 1;
+    /* transform: scale(1); */
+    /* transform: translateY(0px); */
+    transform: translateX(0px);
+}
+
+/* card-transition end*/
+
 
 
 :root{
@@ -100,6 +163,14 @@ nav a{
     --col-start-card2: hsl(158, 36%, 23%);
 
 }
+
+/* Category empity */
+.bg-category-empity{
+    background-image: url(/public/img/sfondoCategory.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/* Category empity end */
 
 /* navbar */
 .bg-nav{
