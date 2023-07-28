@@ -1,13 +1,5 @@
 <x-layout>
-  {{-- <div class="container-fluid bg-image">
-    <div class="row vh-100">
-      <div class="col-12 text-center d-flex flex-column justify-content-center align-items-center">
-        <h1 class="h1-home">SnapSell</h1>
-        <h2 class="h2-home">Trade, Click, Smile </h2>
-      </div>
-    </div>
-  </div> --}}
-  
+
   <div class="container-fluid bg-image">
     <div class="row vh-100 mb-5">
       <div class="col-12 p-0">

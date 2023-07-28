@@ -10,7 +10,8 @@ body{
 }
 nav a{
     font-size: 20px !important;
-    color: #00afb9 !important; 
+    color: #17c6cf !important; 
+    text-shadow: 1px 1px 1px black;
 }
 
 .custom{
@@ -177,7 +178,30 @@ nav a{
     transition: 0.5s;
     background-color: rgba(255, 255, 255, 0.7);
 }
-/* navbarend */
+
+.dropd-item:hover{
+    background-color: #00afb9 !important;
+    color: white !important;
+}
+
+.bg-notification{
+    background-color: #00afb9 !important;
+}
+
+.btn-searchbar{
+    background-color: #00afb9 !important;
+    color: white;
+    font-weight:500;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #00afb9;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #00afb940;
+}
+/* navbar end */
 
 /* Start register-login --------------------------------------------------------------------------------------------------- */
 .bg-custom-rl{

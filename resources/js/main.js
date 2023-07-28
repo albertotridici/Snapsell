@@ -36,3 +36,6 @@ window.addEventListener('scroll', ()=>{
         navbar.classList.remove("bg-nav");
     }
 });
+
+let blur = document.querySelectorAll('.blur')
+

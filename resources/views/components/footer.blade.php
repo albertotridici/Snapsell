@@ -8,7 +8,7 @@
         <!-- Grid row -->
         <div class="row mt-3">
           <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 d-flex justify-content-center align-items-center">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
                 <img src="/img/logo3.png" class="logo-footer" alt="">
@@ -33,27 +33,6 @@
             </p>
             <p>
               <a href="#!" class="text-reset">Laravel</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4" style="color: #00afb9;">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -85,28 +64,28 @@
           </p>
           <div class=" container-fluid">
             <div class="row">
-                <div class="col-2 d-flex justify-content-center flex-column align-items-center">
-                    <div><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></div>
+                <div class="col-6 col-lg-2 p-0 d-flex justify-content-center flex-column align-items-center">
+                    <a href="https://www.linkedin.com/in/alberto-tridici-fullstackdeveloperjunior/" target="blank"><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></a>
                     <a href="https://www.linkedin.com/in/alberto-tridici-fullstackdeveloperjunior/" class="a-footer" target="blank">Alberto</a>
                 </div>
-                <div class="col-2 d-flex justify-content-center flex-column align-items-center">
-                    <div><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></div>
+                <div class="col-6 col-lg-2 p-0 d-flex justify-content-center flex-column align-items-center">
+                    <a href="https://www.linkedin.com/in/leonardo-lerario-457b5a215/" target="blank"><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></a>
                     <a href="https://www.linkedin.com/in/leonardo-lerario-457b5a215/" class="a-footer" target="blank">Leonardo</a>
                 </div>
-                <div class="col-2 d-flex justify-content-center flex-column align-items-center">
-                    <div><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></div>
+                <div class="col-6 col-lg-2 p-0 d-flex justify-content-center flex-column align-items-center">
+                    <a href="https://www.linkedin.com/in/graziano-calella-fullstack-webdeveloper/" target="blank"><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></a>
                     <a href="https://www.linkedin.com/in/graziano-calella-fullstack-webdeveloper/" class="a-footer" target="blank">Graziano</a>
                 </div>
-                <div class="col-2 d-flex justify-content-center flex-column align-items-center">
-                    <div><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></div>
+                <div class="col-6 col-lg-2 p-0 d-flex justify-content-center flex-column align-items-center">
+                    <a href="https://www.linkedin.com/in/morris-vattiata/" target="blank"><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></a>
                     <a href="https://www.linkedin.com/in/morris-vattiata/" class="a-footer" target="blank">Morris</a>
                 </div>
-                <div class="col-2 d-flex justify-content-center flex-column align-items-center">
-                    <div><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></div>
+                <div class="col-6 col-lg-2 p-0 d-flex justify-content-center flex-column align-items-center">
+                    <a href="https://www.linkedin.com/in/luigisantillan-webdeveloper/" target="blank"><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></a>
                     <a href="https://www.linkedin.com/in/luigisantillan-webdeveloper/" class="a-footer" target="blank">Luigi</a>
                 </div>
-                <div class="col-2 d-flex justify-content-center flex-column align-items-center">
-                    <div><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></div>
+                <div class="col-6 col-lg-2 p-0 d-flex justify-content-center flex-column align-items-center">
+                    <a href=""><i class="fab fa-linkedin fa-2x text-center" style="color: #00afb9;"></i></a>
                     <a href="" class="a-footer" target="blank">Emilia</a>
                 </div>
               </div> 
