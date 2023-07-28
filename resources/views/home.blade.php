@@ -56,7 +56,7 @@
   <div class="container py-5">
     <div class="row">
       @foreach ($announcements as $announcement)
-      <div class="col-4 p-3">
+      <div class="col-4 p-3 watch">
         <div class="container-card">
           <div class="img">
             <img src="https://digitshack.com/codepen/mentor13/image-product-desktop.jpg" alt="foto card">

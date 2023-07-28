@@ -5,7 +5,8 @@ let swiper = new Swiper(".mySwiper", {
     },
   });
 
-  let watch = document.querySelectorAll('.watch')
+let watch = document.querySelectorAll('.watch')
+
 
 function callback(items) {
     items.forEach(item => {
@@ -24,6 +25,7 @@ watch.forEach(element => {
 });
 
 let navbar = document.querySelector('#navbar');
+
 
 window.addEventListener('scroll', ()=>{
     let scrolled = window.scrollY;
