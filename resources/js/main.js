@@ -5,7 +5,8 @@ let swiper = new Swiper(".mySwiper", {
     },
   });
 
-  let watch = document.querySelectorAll('.watch')
+let watch = document.querySelectorAll('.watch')
+
 
 function callback(items) {
     items.forEach(item => {
@@ -21,4 +22,17 @@ let observer = new IntersectionObserver(callback,{threshold:0.6});
 
 watch.forEach(element => {
     observer.observe(element);
+});
+
+let navbar = document.querySelector('#navbar');
+
+
+window.addEventListener('scroll', ()=>{
+    let scrolled = window.scrollY;
+
+    if (scrolled > 0) {
+        navbar.classList.add("bg-nav");
+    }else{
+        navbar.classList.remove("bg-nav");
+    }
 });
