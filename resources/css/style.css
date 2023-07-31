@@ -623,11 +623,22 @@ a.cta i{
 }
 
 .content-choose{
-    margin: 15px 0 0 0;
+    margin: 0;
     background-color: #dddddd;
     padding: 10px 0;
     border-radius: 15px;
     width: 100%;
+}
+.content-choose p{
+    padding: 0 0 10px;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6em;
 }
 .content-choose i{
     color: white;
@@ -703,13 +714,18 @@ a.cta i{
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: #e2feee;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     animation: animateAlert .6s linear alternate-reverse infinite;
     transition: 0.6s ease;
+}
+.content-icon-s{
+    background-color: #e2feee;
+}
+.content-icon-d{
+    background-color: #f5b5b5;
 }
 @keyframes animateAlert {
     from{

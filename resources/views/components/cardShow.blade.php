@@ -85,11 +85,14 @@
                         <div class="price">
                             <p class="current-price">€ {{$announcement->formatPrice()}}</p>
                         </div>
-                        <a href="{{url()->previous()}}" class="cta"><i class="fa-solid fa-arrow-right-from-bracket"></i>Torna indietro</a>
+                        @if (Route::currentRouteName() != 'revisor.index')
+                            <a href="{{url()->previous()}}" class="cta"><i class="fa-solid fa-arrow-right-from-bracket"></i>Torna indietro</a>
+                        @endif
                     </div>
                     @if (Route::currentRouteName() == 'revisor.index')
                         <div class="row content-choose">
                             <div class="col-6 p-0">
+                                <p>Accetta</p>
                                 <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
@@ -97,6 +100,7 @@
                                 </form>
                             </div>
                             <div class="col-6 p-0">
+                                <p>Rifiuta</p>
                                 <form action="{{route('revisor.reject_announcement', ['announcement' => $announcement])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
