@@ -1,9 +1,4 @@
 <div>
-    @if (session()->has('message'))
-        <div class="alert alert-success">
-            {{session('message')}}
-        </div>
-    @endif
     <form wire:submit.prevent="store">
         @csrf
         <div class="mb-3">
@@ -15,10 +10,11 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" wire:model.lazy="description">
+            <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" wire:model.lazy="description">
             @error('description')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
+            </textarea>
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
@@ -36,8 +32,18 @@
                 @endforeach
             </select>
         </div>
-
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
+    @if (session()->has('message'))
+        <script>
+                let messageModal = new bootstrap.Modal(document.querySelector('#alertSuccess'));
+                messageModal.show();
+                
+                messageModal._element.addEventListener('hide.bs.modal', function() {
+                    location.reload();
+                });
+        </script>
+    @endif
+    <x-alertSuccess></x-alertSuccess>
 </div>
+

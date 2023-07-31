@@ -5,7 +5,7 @@
                 <div class="panels-container panels-r col-6">
                     <div class="panel">
                         <div class="text-white">
-                            <h3>Hai già un accaunt?</h3>
+                            <h3>Hai già un account?</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolor, eos incidunt minima iure?</p>
                             <a href="{{route('login')}}" class="btn-rl">Accedi</a>
                         </div>

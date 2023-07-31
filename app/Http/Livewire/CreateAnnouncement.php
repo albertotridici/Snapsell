@@ -8,17 +8,16 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class CreateAnnouncement extends Component
-{   
-
+{ 
     public $title;
     public $description;
     public $price;
     public $category;
 
     protected $rules = [
-        'title'=>'required|min:5|max:10',
+        'title'=>'required|min:5',
         'description'=>'required',
-        'price'=>'required|numeric|max:999999,99',
+        'price'=>'required|numeric|max:999999,99|regex:/^\d+(\.\d{2})$/',
         'category'=>'required'
        // regex:/^\d{1,6}(.\d{1,2})?$/
     ];
@@ -28,7 +27,8 @@ class CreateAnnouncement extends Component
         'numeric'=>'il campo :attribute deve essere un numero',
         'title.min'=>'il titolo è troppo corto',
         'title.max'=>'il titolo è troppo lungo',
-        'price.max'=>'hai superato il limite massimo di cifre'
+        'price.max'=>'hai superato il limite, numero massimo accettato: 999999.99',
+        'price.regex'=>'devi inserire per forza due cifre decimali: ex 1234.00'
     ];
 
     public function updated($propertyName){
@@ -37,12 +37,13 @@ class CreateAnnouncement extends Component
 
     public function store(){
         $this->validate();
+        
         $category = Category::find($this->category);
        
         $announcement = $category->announcements()->create([
             'title'=>$this->title,
             'description'=>$this->description,
-            'price'=>$this->price
+            'price' => $this->price,
         ]);
 
         Auth::user()->announcements()->save($announcement);

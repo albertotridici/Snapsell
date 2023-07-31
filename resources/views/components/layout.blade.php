@@ -10,7 +10,45 @@
 </head>
 <body>
     <x-navbar></x-navbar>
+    @if (session()->has('access.denied'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let messageModal = new bootstrap.Modal(document.querySelector('#alertDanger'));
+                messageModal.show();
+                
+                messageModal._element.addEventListener('hide.bs.modal', function() {
+                    location.reload();
+                });
+                
+                let btnModal = document.querySelector('#btnModal');
+                btnModal.addEventListener('click', ()=>{
+                    location.reload();
+                });
+            });
+        </script>
+        <x-alertDanger></x-alertDanger>
+    @endif
+    @if (session()->has('message'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let messageModal = new bootstrap.Modal(document.querySelector('#alertSuccess'));
+                messageModal.show();
+                
+                messageModal._element.addEventListener('hide.bs.modal', function() {
+                    location.reload();
+                });
+                
+                let btnModal = document.querySelector('#btnModal');
+                btnModal.addEventListener('click', ()=>{
+                    location.reload();
+                });
+            });
+        </script>
+        <x-alertSuccess></x-alertSuccess>
+    @endif
     {{$slot}}
+
+    <x-footer></x-footer>
     
     @livewireScripts
     <script src="https://kit.fontawesome.com/2aed272892.js" crossorigin="anonymous"></script>
