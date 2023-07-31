@@ -32,6 +32,8 @@ window.addEventListener('scroll', ()=>{
     }
 });
 
+let blur = document.querySelectorAll('.blur');
+
 // START controllo swiper del dettaglio --------------------------------------------------------------------------------------
 let swiperThumbs = new Swiper(".swiperThumbs", {
     loop: true,

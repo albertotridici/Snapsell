@@ -10,10 +10,11 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" wire:model.lazy="description">
+            <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" wire:model.lazy="description">
             @error('description')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
+            </textarea>
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
