@@ -83,7 +83,7 @@
                     <textarea readonly class="pro-des-show">{{$announcement->description}}</textarea readonly>
                     <div>
                         <div class="price">
-                            <p class="current-price">€ {{$announcement->price}}</p>
+                            <p class="current-price">€ {{$announcement->formatPrice()}}</p>
                         </div>
                         <a href="{{url()->previous()}}" class="cta"><i class="fa-solid fa-arrow-right-from-bracket"></i>Torna indietro</a>
                     </div>
@@ -93,14 +93,14 @@
                                 <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn btn-revisor-accepted" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right"><i class="fa-solid fa-check"></i></button>
+                                    <button type="submit" class="btn btn-revisor-accepted" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Accetta" data-bs-custom-class="tooltip-revisor-accepted" ><i class="fa-solid fa-check"></i></button>
                                 </form>
                             </div>
                             <div class="col-6 p-0">
                                 <form action="{{route('revisor.reject_announcement', ['announcement' => $announcement])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn btn-revisor-reject"><i class="fa-solid fa-xmark"></i></button>
+                                    <button type="submit" class="btn btn-revisor-reject" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Rifiuta" data-bs-custom-class="tooltip-revisor-reject"><i class="fa-solid fa-xmark"></i></button>
                                 </form>
                             </div>
                         </div>

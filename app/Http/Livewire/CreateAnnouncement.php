@@ -17,9 +17,10 @@ class CreateAnnouncement extends Component
     protected $rules = [
         'title'=>'required|min:5',
         'description'=>'required',
-        'price'=>'required|numeric|max:999999,99|regex:/^\d+(\.\d{2})$/',
+        'price'=>'required|numeric|max:999999,99',
         'category'=>'required'
        // regex:/^\d{1,6}(.\d{1,2})?$/
+        // |regex:/^\d+(\.\d{2})$/
     ];
 
     protected $messages = [
@@ -28,7 +29,6 @@ class CreateAnnouncement extends Component
         'title.min'=>'il titolo è troppo corto',
         'title.max'=>'il titolo è troppo lungo',
         'price.max'=>'hai superato il limite, numero massimo accettato: 999999.99',
-        'price.regex'=>'devi inserire per forza due cifre decimali: ex 1234.00'
     ];
 
     public function updated($propertyName){
@@ -48,7 +48,7 @@ class CreateAnnouncement extends Component
 
         Auth::user()->announcements()->save($announcement);
         
-        session()->flash('message','annuncio inserito con successo!');
+        session()->flash('message','Annuncio inserito con successo!');
 
         $this->reset();
     }

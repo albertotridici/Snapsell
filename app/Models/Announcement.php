@@ -29,6 +29,12 @@ class Announcement extends Model
         }
     }
     // End accorciamento descrizione card
+    public function formatPrice(){
+        return number_format($this->price, 2, ',', '.');
+    }
+
+
+
 
     public function toSearchableArray(){
         $category = $this->category;

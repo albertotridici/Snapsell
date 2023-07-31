@@ -20,6 +20,6 @@ class IsRevisor
             return $next($request);
         }
         
-        return redirect('/')->with('access.denied', 'Attenzione! Solo i revisori hanno accesso a questa area.');
+        return redirect('/')->with('access.denied', "Attenzione! Solo i revisori hanno accesso a quest'area!");
     }
 }
