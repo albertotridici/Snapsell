@@ -1,9 +1,4 @@
 <div>
-    @if (session()->has('message'))
-        <div class="alert alert-success">
-            {{session('message')}}
-        </div>
-    @endif
     <form wire:submit.prevent="store">
         @csrf
         <div class="mb-3">
@@ -36,8 +31,18 @@
                 @endforeach
             </select>
         </div>
-
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
+    @if (session()->has('message'))
+        <script>
+                let messageModal = new bootstrap.Modal(document.querySelector('#alertSuccess'));
+                messageModal.show();
+                
+                messageModal._element.addEventListener('hide.bs.modal', function() {
+                    location.reload();
+                });
+        </script>
+    @endif
+    <x-alertSuccess></x-alertSuccess>
 </div>
+

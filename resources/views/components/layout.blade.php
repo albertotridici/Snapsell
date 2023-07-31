@@ -10,16 +10,42 @@
 </head>
 <body>
     <x-navbar></x-navbar>
-        @if (session()->has('access.denied'))
-            <div class="alert alert-success">
-                {{session('access.denied')}}
-            </div>
-        @endif
-        @if (session()->has('message'))
-            <div class="alert alert-success">
-                {{session('message')}}
-            </div>
-        @endif
+    @if (session()->has('access.denied'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let messageModal = new bootstrap.Modal(document.querySelector('#alertDanger'));
+                messageModal.show();
+                
+                messageModal._element.addEventListener('hide.bs.modal', function() {
+                    location.reload();
+                });
+                
+                let btnModal = document.querySelector('#btnModal');
+                btnModal.addEventListener('click', ()=>{
+                    location.reload();
+                });
+            });
+        </script>
+        <x-alertDanger></x-alertDanger>
+    @endif
+    @if (session()->has('message'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let messageModal = new bootstrap.Modal(document.querySelector('#alertSuccess'));
+                messageModal.show();
+                
+                messageModal._element.addEventListener('hide.bs.modal', function() {
+                    location.reload();
+                });
+                
+                let btnModal = document.querySelector('#btnModal');
+                btnModal.addEventListener('click', ()=>{
+                    location.reload();
+                });
+            });
+        </script>
+        <x-alertSuccess></x-alertSuccess>
+    @endif
     {{$slot}}
 
     <x-footer></x-footer>

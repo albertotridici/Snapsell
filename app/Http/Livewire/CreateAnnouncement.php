@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class CreateAnnouncement extends Component
-{   
-
+{ 
     public $title;
     public $description;
     public $price;

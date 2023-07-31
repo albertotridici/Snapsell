@@ -1,14 +1,5 @@
 <x-layout>
-  {{-- <div class="container-fluid bg-image">
-    <div class="row vh-100">
-      <div class="col-12 text-center d-flex flex-column justify-content-center align-items-center">
-        <h1 class="h1-home">SnapSell</h1>
-        <h2 class="h2-home">Trade, Click, Smile </h2>
-      </div>
-    </div>
-  </div> --}}
-  
-  <div class="container-fluid bg-image">
+  <div class="container-fluid bg-image swiper-home">
     <div class="row vh-100 mb-5">
       <div class="col-12 p-0">
         <div class="swiper mySwiper">
@@ -44,7 +35,6 @@
       </div>
     </div>
   </div>
-
   {{-- Start ultimi sei annunci ----------------------------------------------------------------------------------------- --}}
   <div class="container bg-image">
     <div class="row">
@@ -56,11 +46,30 @@
   <div class="container py-5">
     <div class="row">
       @foreach ($announcements as $announcement)
-        <div class="col-4 p-3 watch transition-card">
+        <div class="col-12 col-md-6 col-xl-4 p-3 watch transition-card">
           <x-card :announcement="$announcement"></x-card>
         </div>
       @endforeach
     </div>
   </div>
   {{-- End ultimi sei annunci ------------------------------------------------------------------------------------------- --}}
+  
+  {{-- <script> //NON TOCCARE IN FASE DI TEST...
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+  </script>
+
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+    Tooltip on top
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
+    Tooltip on right
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+    Tooltip on left
+  </button> --}}
+  
 </x-layout>

@@ -21,6 +21,13 @@ class Announcement extends Model
             return $this->description;
         }
     }
+    public function titlSubstr(){
+        if(strlen($this->title) > 26){
+            return substr($this->title, 0, 23) . '...';
+        }else{
+            return $this->title;
+        }
+    }
     // End accorciamento descrizione card
 
     public function toSearchableArray(){

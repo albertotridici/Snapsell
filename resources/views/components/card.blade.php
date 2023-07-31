@@ -15,7 +15,7 @@
             </div>
             <h6 class="pro-cat">{{$announcement->created_at->format('d/m/Y')}}</h6>
         </div>
-        <h2 class="pro-name">{{$announcement->title}}</h2>
+        <h2 class="pro-name">{{$announcement->titlSubstr()}}</h2>
         <div class="des-content">
             <p class="pro-des">{{$announcement->descSubstr()}}</p>
         </div>
