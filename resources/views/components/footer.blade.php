@@ -17,21 +17,27 @@
           <!-- Grid column -->
   
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-2 col-lg-4 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4" style="color: #00afb9;">
-              Products
+            <h6 class="text-center text-uppercase fw-bold mb-4" style="color: #00afb9;">
+              Linguaggi e framework utilizzati
             </h6>
-            <p>
-              <a href="#!" class="text-reset">Angular</a>
+            <p class="text-center">
+              <a href="#!" target="blank" class="text-reset">Html</a>
             </p>
-            <p>
-              <a href="#!" class="text-reset">React</a>
+            <p class="text-center">
+              <a href="#!" class="text-reset">Css</a>
             </p>
-            <p>
-              <a href="#!" class="text-reset">Vue</a>
+            <p class="text-center">
+              <a href="#!" class="text-reset">Javascript</a>
             </p>
-            <p>
+            <p class="text-center">
+              <a href="#!" class="text-reset">PHP</a>
+            </p>
+            <p class="text-center">
+              <a href="#!" class="text-reset">Bootstrap</a>
+            </p>
+            <p class="text-center" >
               <a href="#!" class="text-reset">Laravel</a>
             </p>
           </div>
@@ -40,12 +46,9 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4" style="color: #00afb9;">Contact</h6>
-            <p><i class="fas fa-2x fa-home me-3" style="color: #00afb9;"></i> New York, NY 10011, US</p>
-            <p>
-              <i class="fas fa-2x fa-envelope me-3" style="color: #00afb9;"></i>
-              info@example.com
-            </p>
+            <h6 class="text-uppercase fw-bold mb-4" style="color: #00afb9;">Contatti</h6>
+            <p class="a-footer">
+              <i class="fa-solid fa-users fa-2x me-3" style="color: #00afb9;"></i> Chi siamo</p>
             <p><i class="fa-solid fa-2x fa-handshake-angle me-3" style="color: #00afb9;"></i>
               <a href="{{route('become.revisor')}}" class="a-footer">Lavora con noi</a></p>
 
@@ -58,7 +61,7 @@
     </section>
     <!-- Section: Links  -->
 
-    <section class="p-4 border-bottom">
+    {{-- <section class="p-4 border-bottom">
         <p class=" fw-bold text-center mb-4 pb-4" style="color: #00afb9;">
             Powered By
           </p>
@@ -90,7 +93,7 @@
                 </div>
               </div> 
             </div>
-        </section> 
+        </section>  --}}
   
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">

@@ -22,17 +22,18 @@ watch.forEach(element => {
 });
 
 let navbar = document.querySelector('#navbar');
+
 window.addEventListener('scroll', ()=>{
     let scrolled = window.scrollY;
+
 
     if (scrolled > 0) {
         navbar.classList.add("bg-nav");
     }else{
         navbar.classList.remove("bg-nav");
+        navbar.classList.add("bg-nav-mobile");
     }
 });
-
-let blur = document.querySelectorAll('.blur');
 
 // START controllo swiper del dettaglio --------------------------------------------------------------------------------------
 let swiperThumbs = new Swiper(".swiperThumbs", {
