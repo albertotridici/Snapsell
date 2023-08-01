@@ -1,18 +1,18 @@
 <x-layout>
-    <div class="bg-custom-rl">
-        <div class="container container-custom">
-            <div class="row h-100">
-                <div class="panels-container panels-r col-6">
+    <div class="container py-5 mt-5">
+        <div class="row justify-content-center p-3 p-md-0">
+            <div class="row col-12 col-xl-8 rl-content">
+                <div class="panels-container col-6 col-12 col-md-6 signup">
                     <div class="panel">
                         <div class="text-white">
                             <h3>Hai già un account?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolor, eos incidunt minima iure?</p>
+                            <p>Ben tornato! Accedi al nostro sito e continua a navigare.</p>
                             <a href="{{route('login')}}" class="btn-rl">Accedi</a>
                         </div>
-                        <img src="./media/login2.svg" alt="" class="image">
+                        <img src="./media/login2.svg" alt="image register" class="image">
                     </div>
                 </div>
-                <div class="col-6 signin-signup signup">
+                <div class="col-12 col-md-6 signin-signup">
                     <form method="POST" action="{{route('register')}}" class="form">
                         @csrf
                         <h2 class="title">Registrati</h2>
@@ -33,7 +33,7 @@
                             <input type="password" name="password_confirmation" placeholder="Confirm password">
                         </div>
                         <button type="submit" class="btn-rl">Registrati</button>
-                        <p class="social-text">Or Sign in with social platform</p>
+                        {{-- <p class="social-text">Or Sign in with social platform</p>
                         <div class="social-media">
                             <a href="#" class="social-icon">
                                 <i class="fab fa-facebook"></i>
@@ -47,7 +47,7 @@
                             <a href="" class="social-icon">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                        </div>
+                        </div> --}}
                     </form>
                 </div>
             </div>
