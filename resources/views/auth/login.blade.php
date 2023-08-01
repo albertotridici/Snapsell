@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="bg-custom-rl">
-        <div class="container container-custom">
-            <div class="row h-100">
-                <div class="col-6 signin-signup signin">
+    <div class="container py-5 mt-5">
+        <div class="row justify-content-center p-3 p-md-0">
+            <div class="row col-12 col-xl-8 rl-content">
+                <div class="col-12 col-md-6 signin-signup">
                     <form method="POST" action="{{route('login')}}" class="form">
                         @csrf
                         <h2 class="title">Accedi</h2>
@@ -15,31 +15,16 @@
                             <input type="password" name="password" placeholder="Password">
                         </div>
                         <button type="submit" class="btn-rl">Accedi</button>
-                        <p class="social-text">Or Sign in with social platform</p>
-                        <div class="social-media">
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="" class="social-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="social-icon">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="social-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
                     </form>
                 </div>
-                <div class="panels-container panels-l col-6">
+                <div class="panels-container col-12 col-md-6">
                     <div class="panel">
                         <div class="text-white">
                             <h3>Non sei registrato?</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolor, eos incidunt minima iure?</p>
+                            <p>Scopri un mondo di opportunità! Registrati al nostro sito e accedi a contenuti esclusivi.</p>
                             <a href="{{route('register')}}" class="btn-rl">Registrati</a>
                         </div>
-                        <img src="./media/register2.svg" alt="" class="image">
+                        <img src="./media/register2.svg" alt="image register" class="image">
                     </div>
                 </div>
             </div>

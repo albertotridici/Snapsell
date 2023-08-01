@@ -20,7 +20,7 @@
             <p class="pro-des">{{$announcement->descSubstr()}}</p>
         </div>
         <div class="price">
-            <p class="current-price">€ {{$announcement->price}}</p>
+            <p class="current-price">€ {{$announcement->formatPrice()}}</p>
         </div>
         <a href="{{route('announcement.show',compact('announcement'))}}" class="cta"><i class="fa-solid fa-paper-plane"></i>Scopri di più</a>
     </div>

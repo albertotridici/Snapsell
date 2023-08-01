@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-header modal-header-success">
                 <button type="button" class="btn-close btn-close-alert" data-bs-dismiss="modal" aria-label="Close"></button>
-                <div class="content-icon">
+                <div class="content-icon content-icon-s">
                     <i class="fa-solid fa-check"></i>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top bg-nav-mobile">
     <div class="container-fluid">
         <img src="/img/logo3.png" class="custom" alt="">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
                     <a class="nav-link active color-custom px-4" aria-current="page" href="{{route('announcement.index')}}">Tutti gli Annunci</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle px-4 blur" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle px-4" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
                     <ul class="dropdown-menu m-0 p-0" aria-labelledby="categoriesDropdown">
@@ -25,15 +25,15 @@
 
             </ul>
             @guest
-                <div class="nav-item px-4">
+                <div class="nav-item px-4 py-2">
                     <a class="nav-link" href="{{route('register')}}">Registrati</a>
                 </div>
-                <div class="nav-item px-4">
+                <div class="nav-item px-4 py-2">
                     <a class="nav-link" href="{{route('login')}}">Accedi</a>
                 </div>
             @else                
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle px-4 blur" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle px-4 py-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Benvenuto {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu p-0 m-0">
