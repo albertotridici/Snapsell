@@ -760,4 +760,103 @@ a.cta i{
 .bg-footer{
     background-color: rgb(233, 233, 233);
 }
+
+
+
+
+
+
+
+
+
+/* about-us */
+
+
+.circle{
+    height: 400px;
+    width: 400px;
+    /* border-radius: 50%;
+    border: 2px solid  var(--col-vinted); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.opener{
+    height: 105px;
+    width: 105px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+    z-index: 3;
+    background-color: rgb(245, 245, 245);
+}
+
+.moved{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--col-vinted);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 2;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.programmers-card{
+    height: 450px;
+    width: 350px;
+}
+
+.inner{
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--col-vinted);
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    position: relative;
+}
+
+.programmers-card:hover > .inner{
+    transform: rotateY(180deg);
+}
+
+.inner-face{
+    height: 450px;
+    width: 350px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.inner-back{
+    height: 450px;
+    width: 350px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
 /* End FOOTER ------------------------------------------------------------------------------------------------------------- */

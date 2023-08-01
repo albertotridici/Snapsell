@@ -48,6 +48,8 @@
             </p>
             <p><i class="fa-solid fa-2x fa-handshake-angle me-3" style="color: #00afb9;"></i>
               <a href="{{route('become.revisor')}}" class="a-footer">Lavora con noi</a></p>
+              <p><i class="fa-solid fa-2x fa-handshake-angle me-3" style="color: #00afb9;"></i>
+                <a href="{{route('aboutUs')}}" class="a-footer">Chi siamo</a></p>
 
             
           </div>
