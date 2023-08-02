@@ -43,3 +43,5 @@ Route::middleware(['auth'])->group(function(){
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnouncements'])->name('announcements.search');
 
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
+Route::get('/chiSiamo', [PublicController::class, 'chiSiamo'])->name('chiSiamo');
