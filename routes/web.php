@@ -41,4 +41,4 @@ Route::middleware(['auth'])->group(function(){
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnouncements'])->name('announcements.search');
 
 
-Route::get('/aboutUs', [PublicController::class, 'aboutUs'])->name('aboutUs');
+
