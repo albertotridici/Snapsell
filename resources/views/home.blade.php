@@ -55,7 +55,7 @@
   <div class="container py-5 bg-image">
     <div class="row">
       <div class="col-12 text-center">
-        <h2 class="display-5 sottotitoli">Gli ultimi articoli pubblicati dai nostri utenti</h2>
+        <h2 class="display-5 sottotitoli">{{__('ui.allAnnouncement')}}</h2>
       </div>
     </div>
   </div>

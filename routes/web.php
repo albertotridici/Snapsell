@@ -4,6 +4,7 @@ use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Sail\Console\PublishCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,5 +41,4 @@ Route::middleware(['auth'])->group(function(){
 
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnouncements'])->name('announcements.search');
 
-
-
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');

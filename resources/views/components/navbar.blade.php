@@ -22,6 +22,15 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <x-_locale lang="it" nation="it"/>
+                </li>
+                <li class="nav-item">
+                    <x-_locale lang="en" nation="gb"/>
+                </li>
+                <li class="nav-item">
+                    <x-_locale lang="es" nation="es"/>
+                </li>
             </ul>
             @guest
                 <div class="nav-item px-4 py-2">
