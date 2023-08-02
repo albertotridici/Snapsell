@@ -35,7 +35,7 @@
         <div class="mb-3">
             <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror">
             @error('temporary_images.*')
-            <div class="alert alert-danger">{{$message}}</div>
+                <div class="alert alert-danger">{{$message}}</div>
             @enderror
         </div>
         @if (!empty($images))
@@ -45,8 +45,7 @@
                     <div class="row border-4 border border-info rounded py-4">
                         @foreach ($images as $key => $image)
                             <div class="col my-3">
-                                <div class="mx-auto rounded" style="height:100px; width:100px; background-image:url({{$image->temporaryUrl()}});">
-                               </div>
+                                <div class="mx-auto rounded" style="height:500px; width:500px; background-image: url({{$image->temporaryUrl()}});"></div>
                                <button type="button" class="btn btn-danger d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">
                             Cancella</button>
                             </div>

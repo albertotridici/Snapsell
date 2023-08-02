@@ -67,111 +67,23 @@ nav a{
     font-weight: 500;
 }
 /* START swiper header home ----------------------------------------------------------------------------------------------- */
-.swiper-home .swiper {
-    width: 100%;
-    height: 100%;
-}
 
-.swiper-home .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.swiper-home .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} 
 
-.swiper-home .img-custom1{
-    background-image: url(/public/img/guardaroba.jpg);
-    background-size: cover;
-    background-position: center;
-}
 
-.swiper-home .img-custom2{
-    background-image: url(/public/img/tiziopesi.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.swiper-home .img-custom3{
-    background-image: url(/public/img/musica.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.swiper-home .img-custom4{
-    background-image: url(/public/img/lavoraconnoi.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-  /* h1 */
-  .transition{
-    opacity: 0;
-    /* transform: translateX(-300px); */
-    /* appare dall'alto */
-    /* transform: translateY(-300px); */
-    /* appare dal nulla */
-    transform: scale(0.5);
-    transition: all 1.2s ease;
-}
-
-.transition.in-page{
-    opacity: 1;
-    /* transform: scale(1); */
-    /* transform: translateY(0px); */
-    transform: translateX(0px);
-}
-
-.swiper-home .swiper-button{
-    background-color: var(--col-vinted-custom);
-    padding: 14px 0;
-    border-radius: 12px;
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    width: 200px;
-    display: block;
-    text-align: center;
-}
-
-.swiper-home .swiper-button:hover{
-    transition: background-color .3s ease;
-    background-color: var(--col-vinted);
-}
-
-.swiper-home .swiper-button i{
-    padding-right: 10px;
-}
 /* END swiper header home ------------------------------------------------------------------------------------------------- */
 
 /* card-transition */
-
 .transition-card{
     opacity: 0;
-    /* transform: translateX(-300px); */
-    /* appare dall'alto */
     transform: translateY(-200px);
-    /* appare dal nulla */
-    /* transform: scale(0.5); */
     transition: all 1.2s ease;
 }
 
 .transition-card.in-page{
     opacity: 1;
-    /* transform: scale(1); */
-    /* transform: translateY(0px); */
     transform: translateX(0px);
 }
-
 /* card-transition end*/
 
 
@@ -187,22 +99,11 @@ nav a{
     --col-start-card2: hsl(158, 36%, 23%);
 }
 
-/* Category empity */
-.bg-category-empity{
-    background-image: url(/public/img/sfondoCategory.jpg);
-    background-position: center;
-    background-size: cover;
-}
-/* Category empity end */
-
 /* navbar */
-
 .bg-nav{
     transition: 0.5s;
     background-color: rgba(244, 244, 244, 0.9);
 }
-
-
 
 @media screen and (min-width:0px) and (max-width:1023px){
     .bg-nav-mobile{
@@ -218,21 +119,164 @@ nav a{
 .bg-notification{
     background-color: #00afb9 !important;
 }
-
-.btn-searchbar{
-    background-color: #00afb9 !important;
-    color: white;
-    font-weight:500;
-}
-
-.form-control:focus {
-    color: var(--bs-body-color);
-    background-color: var(--bs-body-bg);
-    border-color: #00afb9;
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem #00afb940;
-}
 /* navbar end */
+
+/* START codice header ---------------------------------------------------------------------------------------------------- */
+.transition{
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 1.2s ease;
+}
+
+.transition.in-page{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.swiperHeader{
+    height: 100vh;
+    position: relative;
+}
+.swiperHeader img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.container-header{
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0, 0.1));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.08);
+}
+.content-header{
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px) saturate(0.6);
+    border-radius: 15px;
+    padding: 2rem;
+}
+.title-header{
+    color: rgb(178, 178, 178);
+    font-size: 60px;
+    line-height: 65px;
+    text-align: center;
+}
+.title-header strong{
+    color: rgb(233, 233, 233);
+}
+.content-addAds{
+    display: flex;
+    padding: 2rem 0;
+}
+.content-addAds p{
+    color: white;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0;
+}
+.content-addAds strong{
+    color: rgb(233, 233, 233);
+}
+.cta-header{
+    background-color: var(--col-vinted);
+    padding: 14px 0;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.cta-header:hover{
+    background-color: var(--col-vinted-custom);
+}
+.cta-header i{
+    padding-right: 10px;
+}
+.content-btn-header{
+    padding: 0 50px;
+}
+
+.form-searchbar{
+    display: flex;
+    justify-content: center;
+}
+.btn-searchbar{
+    background-color: var(--col-vinted);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.btn-searchbar:hover{
+    background-color: var(--col-vinted-custom);
+    color: white;
+}
+.content-input-btn{
+    display: flex;
+    background-color: rgb(233, 233, 233);
+    padding: 5px;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.content-input-btn input{
+    border-radius: 0px;
+    height: 100%;
+    border: 0;
+    background-color: rgb(233, 233, 233);
+    margin-left: 10px;
+    padding: 6px 6px;
+}
+.content-input-btn input::placeholder{
+    text-align: center;
+}
+.content-input-btn input:focus{
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background-color: rgb(233, 233, 233);
+}
+@media only screen and (max-width: 992px){  
+    .content-header{
+        padding: 2rem 0;
+        margin: 0 1rem;
+    }
+    .content-addAds{
+        flex-direction: column;
+    }
+    .title-header{
+        font-size: 48px;
+        line-height: 50px;
+    }
+    .content-addAds p{
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .title-header{
+        padding: 0 2rem;
+    }
+    .content-btn-header{
+        padding: 0 150px;
+    }
+}
+/* END codice header ------------------------------------------------------------------------------------------------------ */
 
 /* Start register-login --------------------------------------------------------------------------------------------------- */
 .rl-content{
@@ -595,7 +639,12 @@ a.cta i{
     background-color: var(--col-vinted-custom);
 }
 
-.swiper-slide img{
+.swiperThumbs .swiper-slide img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+.swiperMain .swiper-slide img{
     object-fit: contain;
     height: 100%;
     width: 100%;
@@ -768,7 +817,6 @@ a.cta i{
     line-height: 1.25rem;
     text-align: center;
 }
-
 /* End gestione alert success/danger -------------------------------------------------------------------------------------- */
 
 /* Start FOOTER ----------------------------------------------------------------------------------------------------------- */
@@ -800,3 +848,5 @@ a.cta i{
     background-color: rgb(233, 233, 233);
 }
 /* End FOOTER ------------------------------------------------------------------------------------------------------------- */
+
+

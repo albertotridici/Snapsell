@@ -4,60 +4,76 @@
             <div class="col-12 col-md-6 swiperContent">
                 <div class="swiper swiperMain ">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                        </div>
+                        @if (!$announcement->images->isEmpty())
+                            @foreach ($announcement->images as $image)
+                                <div class="swiper-slide">
+                                    <img src="{{Storage::url($image->path)}}">
+                                </div>
+                            @endforeach
+                        @else
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                            </div>
+                        @endif
                     </div>
                     <div class="swiper-button-next"></div> 
                     <div class="swiper-button-prev"></div>
                 </div>
                 <div thumbsSlider="" class="swiper swiperThumbs">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                        </div>
+                        @if (!$announcement->images->isEmpty())
+                            @foreach ($announcement->images as $image)
+                                <div class="swiper-slide">
+                                    <img src="{{Storage::url($image->path)}}">
+                                </div>
+                            @endforeach
+                        @else
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
