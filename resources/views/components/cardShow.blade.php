@@ -7,7 +7,8 @@
                         @if (!$announcement->images->isEmpty())
                             @foreach ($announcement->images as $image)
                                 <div class="swiper-slide">
-                                    <img src="{{Storage::url($image->path)}}">
+                                    {{-- <img src="{{Storage::url($image->path)}}"> --}}
+                                    <img src="{{$image->getUrl(600, 600)}}">
                                 </div>
                             @endforeach
                         @else
@@ -45,7 +46,7 @@
                         @if (!$announcement->images->isEmpty())
                             @foreach ($announcement->images as $image)
                                 <div class="swiper-slide">
-                                    <img src="{{Storage::url($image->path)}}">
+                                    <img src="{{$image->getUrl(600, 600)}}">
                                 </div>
                             @endforeach
                         @else
