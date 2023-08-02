@@ -48,19 +48,12 @@
                                 </a>
                             </li>
                         @endif
-
-                        
                         <li><a class="dropdown-item dropd-item" role="button"
                             onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Log Out</a></li>
                         <form method="POST" action="{{route('logout')}}" id="form-logout" class="d-none">@csrf</form>
                     </ul>
                 </div>
             @endguest
-            <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-                @csrf
-                <input name="searched" class="form-control me-2" placeholder="search" aria-label="search" type="search">
-                <button class="btn btn-searchbar" type="submit" >Cerca</button>
-            </form>
         </div>
     </div>
 </nav>
