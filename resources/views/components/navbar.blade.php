@@ -22,7 +22,19 @@
                         @endforeach
                     </ul>
                 </li>
+<<<<<<< HEAD
 
+=======
+                <li class="nav-item">
+                    <x-_locale lang="it" nation="it"/>
+                </li>
+                <li class="nav-item">
+                    <x-_locale lang="en" nation="gb"/>
+                </li>
+                <li class="nav-item">
+                    <x-_locale lang="es" nation="es"/>
+                </li>
+>>>>>>> e667187a01b7404d8732308062f0308371206629
             </ul>
             @guest
                 <div class="nav-item px-4 py-2">
@@ -49,19 +61,12 @@
                                 </a>
                             </li>
                         @endif
-
-                        
                         <li><a class="dropdown-item dropd-item" role="button"
                             onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Log Out</a></li>
                         <form method="POST" action="{{route('logout')}}" id="form-logout" class="d-none">@csrf</form>
                     </ul>
                 </div>
             @endguest
-            <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-                @csrf
-                <input name="searched" class="form-control me-2" placeholder="search" aria-label="search" type="search">
-                <button class="btn btn-searchbar" type="submit" >Cerca</button>
-            </form>
         </div>
     </div>
 </nav>
