@@ -20,11 +20,6 @@
                 messageModal._element.addEventListener('hide.bs.modal', function() {
                     location.reload();
                 });
-                
-                let btnModal = document.querySelector('#btnModal');
-                btnModal.addEventListener('click', ()=>{
-                    location.reload();
-                });
             });
         </script>
         <x-alertDanger></x-alertDanger>
@@ -38,10 +33,19 @@
                 messageModal._element.addEventListener('hide.bs.modal', function() {
                     location.reload();
                 });
+            });
+        </script>
+        <x-alertSuccess></x-alertSuccess>
+    @endif
+    @if (session()->has('messageRevisor'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let messageModal = new bootstrap.Modal(document.querySelector('#alertSuccess'));
+                messageModal.show();
                 
-                let btnModal = document.querySelector('#btnModal');
-                btnModal.addEventListener('click', ()=>{
-                    location.reload();
+                messageModal._element.addEventListener('hide.bs.modal', function() {
+                    let toast = new bootstrap.Toast(document.querySelector('#liveToast'));
+                    toast.show()
                 });
             });
         </script>
