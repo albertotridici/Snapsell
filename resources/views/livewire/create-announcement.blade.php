@@ -45,7 +45,7 @@
                     <div class="row border-4 border border-info rounded py-4">
                         @foreach ($images as $key => $image)
                             <div class="col my-3">
-                                <div class="mx-auto rounded" style="height:100px; width:100px; background-image:url({{$image->temporaryUrl()}});">
+                                <div class=" mx-auto rounded" style="height:100px; width:100px; background-image:url({{$image->temporaryUrl()}});">
                                </div>
                                <button type="button" class="btn btn-danger d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">
                             Cancella</button>
