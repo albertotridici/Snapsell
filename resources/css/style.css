@@ -14,6 +14,7 @@ nav a{
     text-shadow: 1px 1px 1px black;
 }
 
+
 .custom{
     height: 60px;
 }
@@ -800,3 +801,8 @@ a.cta i{
     background-color: rgb(233, 233, 233);
 }
 /* End FOOTER ------------------------------------------------------------------------------------------------------------- */
+
+.img-preview{
+    height: 100px;
+    width: 100px;
+}
