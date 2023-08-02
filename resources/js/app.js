@@ -1,5 +1,6 @@
 import './bootstrap';
 import './main.js';
+import './circle.js';
 
 import 'bootstrap';
 import * as bootstrap from 'bootstrap';
