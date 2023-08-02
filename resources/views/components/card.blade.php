@@ -1,7 +1,7 @@
 <div class="container-card">
     <div class="img">
         {{-- <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://digitshack.com/codepen/mentor13/image-product-desktop.jpg'}}" alt="foto card"> --}}
-        <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 400) : 'https://digitshack.com/codepen/mentor13/image-product-desktop.jpg'}}" alt="foto card">
+        <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(600, 600) : 'https://digitshack.com/codepen/mentor13/image-product-desktop.jpg'}}" alt="foto card">
         @if (Route::currentRouteName() == 'announcement.index')
             <div class="auth-content">
                 <p>{{$announcement->user->name ?? ''}}</p>
