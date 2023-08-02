@@ -46,7 +46,6 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4" style="color: #00afb9;">Contatti</h6>
             <p class="a-footer">
               <i class="fa-solid fa-users fa-2x me-3" style="color: #00afb9;"></i> Chi siamo</p>
             <p><i class="fa-solid fa-2x fa-handshake-angle me-3" style="color: #00afb9;"></i>
