@@ -45,10 +45,8 @@
                   <input name="searched" class="form-control" placeholder="Cerca nel sito..." aria-label="search" type="search">
                 </div>
               </div>
-              
             </form>
           </div>
-          
         </div>
       </div>
     </div>
