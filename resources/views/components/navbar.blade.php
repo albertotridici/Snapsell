@@ -22,13 +22,13 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-3">
                     <x-_locale lang="it" nation="it"/>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-3">
                     <x-_locale lang="en" nation="gb"/>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-3">
                     <x-_locale lang="es" nation="es"/>
                 </li>
             </ul>
