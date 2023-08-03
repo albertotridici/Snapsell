@@ -126,6 +126,7 @@
                             </div>
                         </div>
                         <div class="mt-3">
+                            @foreach ($announcement->images as $image)
                             <p>Adulti: <span class="{{$image->adult}}"></span></p>
                             <p>Satira: <span class="{{$image->spoof}}"></span></p>
                             <p>Medicina: <span class="{{$image->medical}}"></span></p>
@@ -138,6 +139,7 @@
                                   <p class="d-inline">{{$label}}</p>  
                                 @endforeach                                
                             @endif
+                            @endforeach
                         </div>
                     @endif
                 </div>
