@@ -1,8 +1,16 @@
 <x-layout>
-    <div class="container mt-5 pt-5 bg-image">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="h1-viste mb-5 pb-5">{{$announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}</h1>
+            <div class="col-12 p-0">
+                <div class="container-header-secondary bg-revisor">
+                    <div class="content-header watch transition">
+                        @if ($announcement_to_check)
+                            <h1 class="title-header">Ecco l'annuncio da revisionare:<br> <strong>{{$announcement_to_check->title}}</strong></h1>
+                        @else
+                            <h1 class="title-header">Ecco l'annuncio da revisionare:<br> <strong>Non ci sono annunci</strong></h1>
+                        @endif
+                    </div>
+                </div>
             </div>
         </div>
     </div>
