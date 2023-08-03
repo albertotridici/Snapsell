@@ -12,11 +12,7 @@ return['allAnnouncement'=>'Aquí estan nuestros anuncios!',
        'footer2'=>'Acerca de nosotros',
        'footer3'=>'Trabaja con nosotros',
        'card'=>'Saber más',
-<<<<<<< HEAD
-       'craete'=>'Crear anuncio',
-=======
-       'create'=>'crear anuncio',
->>>>>>> f97ca60e3c7da4f1d0e6e2872dfa921dbbb6510a
+       'create'=>'Crear anuncio',
        'success'=>'Completado con éxito',
        'danger'=>'Operación fallida',
        'h1-show'=>'Anuncio',
