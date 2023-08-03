@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="modal-body">
-                <h1 class="modal-title modal-title-success">Effettuato con successo</h1>
+                <h1 class="modal-title modal-title-success">{{__('ui.success')}}</h1>
                 <p class="modal-message">{{session('message')}}</p>
             </div>
         </div>

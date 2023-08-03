@@ -10,11 +10,11 @@
                     <a class="color-custom nav-link px-4" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active color-custom px-4" aria-current="page" href="{{route('announcement.index')}}">Tutti gli Annunci</a>
+                    <a class="nav-link active color-custom px-4" aria-current="page" href="{{route('announcement.index')}}">{{__('ui.navbar1')}}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle px-4" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                        {{__('ui.navbar2')}}
                     </a>
                     <ul class="dropdown-menu m-0 p-0" aria-labelledby="categoriesDropdown">
                         @foreach ($categories as $category)
@@ -22,9 +22,6 @@
                         @endforeach
                     </ul>
                 </li>
-<<<<<<< HEAD
-
-=======
                 <li class="nav-item">
                     <x-_locale lang="it" nation="it"/>
                 </li>
@@ -34,14 +31,13 @@
                 <li class="nav-item">
                     <x-_locale lang="es" nation="es"/>
                 </li>
->>>>>>> e667187a01b7404d8732308062f0308371206629
             </ul>
             @guest
                 <div class="nav-item px-4 py-2">
-                    <a class="nav-link" href="{{route('register')}}">Registrati</a>
+                    <a class="nav-link" href="{{route('register')}}">{{__('ui.navbar3')}}</a>
                 </div>
                 <div class="nav-item px-4 py-2">
-                    <a class="nav-link" href="{{route('login')}}">Accedi</a>
+                    <a class="nav-link" href="{{route('login')}}">{{__('ui.navbar4')}}</a>
                 </div>
             @else                
                 <div class="nav-item dropdown">
