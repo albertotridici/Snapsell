@@ -27,6 +27,7 @@ Route::middleware(['isRevisor'])->group(function(){
     Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
     Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
     Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
+    Route::patch('/annulla/annuncio/{announcement}', [RevisorController::class, 'nullAnnouncement'])->name('revisor.null_announcement');
 });
 // End rotte revisore
 
@@ -42,3 +43,5 @@ Route::middleware(['auth'])->group(function(){
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnouncements'])->name('announcements.search');
 
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
+Route::get('/chiSiamo', [PublicController::class, 'chiSiamo'])->name('chiSiamo');

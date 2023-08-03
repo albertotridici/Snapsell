@@ -56,9 +56,6 @@
                 </div>
             </div>
         @endif
-
-
-
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     @if (session()->has('message'))

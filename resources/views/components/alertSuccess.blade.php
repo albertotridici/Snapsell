@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <h1 class="modal-title modal-title-success">Effettuato con successo</h1>
-                <p class="modal-message">{{session('message')}}</p>
+                <p class="modal-message">{{session('message')}}{{session('messageRevisor')}}</p>
             </div>
         </div>
     </div>
