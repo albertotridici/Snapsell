@@ -188,7 +188,7 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .content-header{
     background-color: rgba(0, 0, 0, 0.3);
@@ -473,7 +473,7 @@ a {
     bottom: -18px;
     padding: 16px 35px 0 35px;
     border-top-right-radius: 10px;
-    color: var(--col-vinted-custom);
+    color: var(--col-vinted);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -552,13 +552,13 @@ p.pro-des{
 }
 
 p.current-price{
-    color: var(--col-vinted-custom);
+    color: var(--col-vinted);
     font-size: 25px;
     padding-right: 25px;
 }
 
 a.cta{
-    background-color: var(--col-vinted-custom);
+    background-color: var(--col-vinted);
     padding: 14px 0;
     border-radius: 12px;
     color: white;
@@ -572,7 +572,7 @@ a.cta{
 }
 
 a.cta:hover{
-    background-color: var(--col-vinted);
+    background-color: var(--col-vinted-custom);
 }
 
 a.cta i{
@@ -625,7 +625,7 @@ a.cta i{
     overflow: hidden;
 }
 .auth-content-show{
-    color: var(--col-vinted-custom);
+    color: var(--col-vinted);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -1013,7 +1013,7 @@ a.cta i{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 992px){
