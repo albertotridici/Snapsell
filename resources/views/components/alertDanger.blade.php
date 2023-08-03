@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="modal-body">
-                <h1 class="modal-title modal-title-danger">Operazione non riuscita</h1>
+                <h1 class="modal-title modal-title-danger">{{__('ui.danger')}}</h1>
                 <p class="modal-message">{{session('access.denied')}}</p>
             </div>
         </div>

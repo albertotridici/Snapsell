@@ -20,7 +20,7 @@
           <div class="col-md-2 col-lg-4 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-center text-uppercase fw-bold mb-4" style="color: #00afb9;">
-              Linguaggi e framework utilizzati
+              {{__('ui.footer1')}}
             </h6>
             <p class="text-center">
               <a href="#!" target="blank" class="text-reset">Html</a>
@@ -49,10 +49,10 @@
             
             <p>
               <i class="fa-solid fa-2x fa-users me-3" style="color: #00afb9;"></i>
-              <a href="{{route('chiSiamo')}}" class="a-footer">Chi siamo</a></p>
+              <a href="{{route('chiSiamo')}}" class="a-footer">{{__('ui.footer2')}}</a></p>
               <p>
                 <i class="fa-solid fa-2x fa-handshake-angle me-3" style="color: #00afb9;"></i>
-                <a href="{{route('become.revisor')}}" class="a-footer">Lavora con noi</a></p>
+                <a href="{{route('become.revisor')}}" class="a-footer">{{__('ui.footer3')}}</a></p>
                 
                 
               </div>
