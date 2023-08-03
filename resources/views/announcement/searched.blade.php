@@ -5,7 +5,7 @@
                 <div class="col-12 p-0">
                     <div class="container-header-secondary bg-search">
                         <div class="content-header watch transition">
-                            <h1 class="title-header">Hai cercato: <br> <strong>Cerca</strong></h1>
+                            <h1 class="title-header">Hai cercato: <br> <strong>{{$cercato}}</strong></h1>
                             <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar mt-4">
                                 @csrf
                                 <div class="content-input-btn">
@@ -38,7 +38,7 @@
             <div class="col-12 p-0">
                 <div class="container-header-secondary bg-search">
                 <div class="content-header watch transition">
-                    <h1 class="title-header">Hai cercato: <br> <strong>Cerca</strong></h1>
+                    <h1 class="title-header">Hai cercato: <br> <strong>{{$cercato}}</strong></h1>
                     <div class="content-addAds content-addAds-secondary">
                     <div class="col-12 col-lg-6">
                         <p class="description-category">Non ci sono annunci: <br><strong>Fatti notare, pubblicane uno!</strong></p>

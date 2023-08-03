@@ -34,11 +34,13 @@
                 <a href="{{route('home')}}" class="btn btn-primary btn-sm">Take action</a>
                 <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
             </div>
-            <form action="{{route('revisor.null_announcement', ['announcement' => $ultimo])}}" method="POST">
-                @csrf
-                @method('PATCH')
-                <button type="submit" class="btn btn-revisor-reject" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Rifiuta" data-bs-custom-class="tooltip-revisor-reject"><i class="fa-solid fa-xmark"></i></button>
-            </form>
+            @if ($ultimo)
+                <form action="{{route('revisor.null_announcement', ['announcement' => $ultimo])}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button type="submit" class="btn btn-revisor-reject" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Rifiuta" data-bs-custom-class="tooltip-revisor-reject"><i class="fa-solid fa-xmark"></i></button>
+                </form>
+            @endif
         </div>
     </div>
     
