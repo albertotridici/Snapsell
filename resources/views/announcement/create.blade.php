@@ -2,7 +2,7 @@
     <div class="container mt-5 pt-5 pb-5 bg-image">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="h1-viste">Crea Annuncio</h1>
+                <h1 class="h1-viste">{{__('ui.create')}}</h1>
             </div>
         </div>
     </div>

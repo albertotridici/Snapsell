@@ -26,13 +26,13 @@
         </div>
         <div class="container-header">
           <div class="content-header watch transition">
-            <h1 class="title-header">Trade, Click, Smile: <br> <strong>Acquista ora e risparmia!</strong></h1>
+            <h1 class="title-header">Trade, Click, Smile: <br> <strong>{{__('ui.home')}}</strong></h1>
             <div class="content-addAds">
               <div class="col-12 col-lg-6">
-                <p>Dai vita alle tue offerte: <br><strong>Pubblica il tuo annuncio ora!</strong></p>
+                <p> {{__('ui.home2')}}<br><strong>{{__('ui.home3')}}</strong></p>
               </div>
               <div class="col-12 col-lg-6 content-btn-header">
-                <a href="{{route('announcement.create')}}" class="cta-header"><i class="fa-solid fa-hand-holding-dollar"></i>Crea nuovo annuncio</a>
+                <a href="{{route('announcement.create')}}" class="cta-header"><i class="fa-solid fa-hand-holding-dollar"></i>{{__('ui.home1')}}</a>
               </div>
             </div>
             <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar">

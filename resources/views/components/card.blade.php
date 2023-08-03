@@ -23,6 +23,6 @@
         <div class="price">
             <p class="current-price">€ {{$announcement->formatPrice()}}</p>
         </div>
-        <a href="{{route('announcement.show',compact('announcement'))}}" class="cta"><i class="fa-solid fa-paper-plane"></i>Scopri di più</a>
+        <a href="{{route('announcement.show',compact('announcement'))}}" class="cta"><i class="fa-solid fa-paper-plane"></i>{{__('ui.card')}}</a>
     </div>
 </div>
