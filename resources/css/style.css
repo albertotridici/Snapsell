@@ -1003,16 +1003,26 @@ a.cta i{
 }
 /* END animazioni card --------------------------------------------------------------------------------------------------- */
 
+.bg-category{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url('./img/categorySfondo2.jpg');
+    background-position: bottom;
+}
+.bg-allAds{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url('./img/sfondoAllAds.jpg');
+}
+.bg-revisor{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url('./img/sfondoRevisor2.jpg');
+}
+.bg-search{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url('./img/sfondoSearch.jpg');
+    background-position: center;
+}
 
-
-.container-header-category{
+.container-header-secondary{
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.1)), url('./img/categorySfondo2.jpg');
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
-
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1020,7 +1030,7 @@ a.cta i{
 }
 
 @media only screen and (min-width: 992px){
-    .content-addAds-category{
+    .content-addAds-secondary{
         width: 780px;
     }
 }
