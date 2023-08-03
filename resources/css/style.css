@@ -897,7 +897,7 @@ a.cta i{
 
 /* End FOOTER ------------------------------------------------------------------------------------------------------------- */
 
-/* start chi siamo ------------------------------------------------------------------------------------------------------------- */
+/* START chi siamo ------------------------------------------------------------------------------------------------------- */
 .circle{
     height: 450px;
     width: 400px;
@@ -987,9 +987,9 @@ a.cta i{
     background-position: center;
     background-size: cover;
 }
-/* end chi siamo ------------------------------------------------------------------------------------------------------------- */
+/* END chi siamo --------------------------------------------------------------------------------------------------------- */
 
-/* inizio card */
+/* START animazioni card ------------------------------------------------------------------------------------------------- */
 .animation1{
     animation-delay: 0.3s;
 }
@@ -1000,4 +1000,27 @@ a.cta i{
 
 .animation3{
     animation-delay: 2s;
+}
+/* END animazioni card --------------------------------------------------------------------------------------------------- */
+
+
+
+.container-header-category{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.1)), url('./img/categorySfondo2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
+@media only screen and (min-width: 992px){
+    .content-addAds-category{
+        width: 780px;
+    }
 }
