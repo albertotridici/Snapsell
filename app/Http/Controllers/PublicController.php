@@ -26,4 +26,8 @@ class PublicController extends Controller
         session()->put('locale', $lang);
         return redirect()->back();
     }
+
+    public function chiSiamo(){
+        return view('chiSiamo');
+    }
 }

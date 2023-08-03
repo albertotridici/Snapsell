@@ -61,10 +61,36 @@
   </div>
   <div class="container py-5">
     <div class="row">
+      @php 
+      $counter = 1;
+      @endphp
       @foreach ($announcements as $announcement)
-        <div class="col-12 col-md-6 col-xl-4 p-3 watch transition-card">
+      @php
+      @endphp
+      @if($counter == 1)
+        <div class="col-12 col-md-6 col-xl-4 p-3 my-3 watch transition-card1 animation1">
           <x-card :announcement="$announcement"></x-card>
+          @php
+          $counter += 1;
+          @endphp
         </div>
+        @elseif($counter == 2)
+        <div class="col-12 col-md-6 col-xl-4 p-3 my-3 watch transition-card2 animation2">
+          <x-card :announcement="$announcement"></x-card>
+          @php
+          $counter +=1;
+          @endphp
+        </div>
+        
+        @elseif($counter == 3)
+        <div class="col-12 col-md-6 col-xl-4 p-3 my-3 watch transition-card3 animation3">
+          <x-card :announcement="$announcement"></x-card>
+          @php
+          $counter =1;
+          @endphp
+        </div>
+        @endif
+        {{-- @dd($counter) --}}
       @endforeach
     </div>
   </div>
