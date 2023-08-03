@@ -125,6 +125,20 @@
                                 </form>
                             </div>
                         </div>
+                        <div class="mt-3">
+                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                            <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                            <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                            <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                            <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
+                        </div>
+                        <div class="mt-3">
+                            @if ($image->labels)
+                                @foreach ($image->labels as $label)
+                                  <p class="d-inline">{{$label}}</p>  
+                                @endforeach                                
+                            @endif
+                        </div>
                     @endif
                 </div>
             </div>
