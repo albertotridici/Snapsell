@@ -32,7 +32,7 @@
                         <div class="inner-face position-relative"></div>
                         <div class="inner-back">
                             <img src="/img/logo4.png" class="custom" alt="">
-                            <p id="programmer-name">Nome</p>
+                            <p id="programmer-name" class="fw-bold">Nome</p>
                             <p id="programmer-description">Descrizione</p>
                         </div>   
                     </div>
