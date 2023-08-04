@@ -1,5 +1,6 @@
 <x-layout>
-  @if(count($category->announcements->where('is_accepted', true)))
+  {{-- @dd($announcements) --}}
+  @if(count($announcements))
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 p-0">
@@ -27,7 +28,7 @@
         @php 
         $counter = 1;
         @endphp
-        @foreach ($category->announcements->where('is_accepted', true) as $announcement)
+        @foreach ($announcements as $announcement)
         @php
         @endphp
         @if($counter == 1)
