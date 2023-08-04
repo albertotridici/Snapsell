@@ -62,6 +62,8 @@ nav a{
     text-shadow: 1px 1px 1px black;
 }
 
+
+
 .sottotitoli{
     font-size: 4vw;
     text-shadow: 1px 1px 1px black;
@@ -888,8 +890,6 @@ a.cta i{
 .circle{
     height: 450px;
     width: 400px;
-    /* border-radius: 50%;
-    border: 2px solid  var(--col-vinted); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -907,7 +907,8 @@ a.cta i{
     transition: 0.5s;
     position: absolute;
     z-index: 3;
-    background-color: rgb(245, 245, 245);
+    background-color:var(--col-vinted);
+    color: white;
 }
 
 .moved{
@@ -922,6 +923,8 @@ a.cta i{
     z-index: 2;
     transition: 0.5s;
     cursor: pointer;
+    background-size: cover;
+
 }
 
 .programmers-card{
@@ -933,7 +936,6 @@ a.cta i{
     height: 100%;
     width: 100%;
     border: 2px solid var(--col-vinted);
-    border-radius: 20px;
     transform-style: preserve-3d;
     background-position: center;
     background-size: 100%;
@@ -953,24 +955,48 @@ a.cta i{
     background-size: 100%;
     background-repeat: no-repeat;
     backface-visibility: hidden;
-    position: absolute;
+    background-size: cover;
 }
+
 
 .inner-back{
     height: 450px;
     width: 350px;
+    background-color: white;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
     text-align: center;
+    top: -450px;
+}
+
+.back-div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+}
+
+.h2-chiSiamo{
+    color: white;
+    font-size: 3vw;
+    text-shadow: 3px 3px 3px black;
+}
+
+@media screen and (min-width:0px) and (max-width:1023px){
+    .h2-chiSiamo{
+        color: white;
+        font-size: 40px;
+        text-shadow: 3px 3px 3px black;
+    }
 }
 
 .bg-chiSiamo{
-    background-image: url(/public/img/giochiHeader2.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url(/public/img/sfondochisiamo.jpg);
     background-position: center;
     background-size: cover;
 }
