@@ -962,25 +962,35 @@ a.cta i{
 .inner-face{
     height: 450px;
     width: 350px;
+    background-image: url(/resources/img/Goblin.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     backface-visibility: hidden;
-    position: absolute;
 }
+
 
 .inner-back{
     height: 450px;
     width: 350px;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
     text-align: center;
+    top: -450px;
 }
+
+.back-div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+}
+
 
 .bg-chiSiamo{
     background-image: url(/public/img/giochiHeader2.jpg);

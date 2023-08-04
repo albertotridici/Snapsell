@@ -5,6 +5,7 @@ let card = document.querySelector('.inner');
 let programmerName = document.querySelector('#programmer-name');
 let programmerDescription = document.querySelector('#programmer-description');
 let transparent = document.querySelector('#transparent');
+let divSovrapposto = document.querySelector('#div-sovrapposto');
 
 if (circle) {
     
@@ -35,7 +36,10 @@ if (circle) {
         check=false;
         movedDivs.forEach((moved, i)=>{
             let angle = (360 * i) / movedDivs.length;
+            moved.setAttribute('data-angle', angle); 
+            moved.setAttribute('id', programmers[i].name);
             moved.style.transform = `rotate(${angle}deg) translate(200px) rotate(-${angle}deg)`;
+            divSovrapposto.classList.add('d-none');
         })
     
     
@@ -47,6 +51,7 @@ if (circle) {
             moved.style.transform = `rotate(0deg) translate(0px) rotate(-0deg)`;
         })
         transparent.classList.add('d-none');
+        divSovrapposto.classList.remove('d-none');
         
     }
     });
@@ -57,6 +62,16 @@ if (circle) {
                 programmerName.innerHTML = `Nome: ${programmers[i].name}`; 
                 programmerDescription.innerHTML = `${programmers[i].description}`;
                 transparent.classList.remove('d-none');
-            })
+
+
+                let movedAngle = +div.dataset.angle;
+                let exp = 360 - movedAngle;
+
+                movedDivs.forEach((moved)=>{
+                    let angle = +moved.dataset.angle;
+                    moved.style.transform = `rotate(${angle + exp}deg) translate(200px) rotate(-${angle + exp}deg)`;
+            });
         })
+    })
+
 }
