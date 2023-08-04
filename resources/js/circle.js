@@ -1,7 +1,7 @@
 let opener = document.querySelector('.opener');
 let circle = document.querySelector('.circle');
 let check = true;
-let card = document.querySelector('.inner');
+let card = document.querySelector('.inner-face');
 let programmerName = document.querySelector('#programmer-name');
 let programmerDescription = document.querySelector('#programmer-description');
 let transparent = document.querySelector('#transparent');
@@ -10,14 +10,13 @@ let divSovrapposto = document.querySelector('#div-sovrapposto');
 if (circle) {
     
     let programmers = [
-        {name:'Alberto', description: 'ciao'},
-        {name:'Leonardo', description:'ciao' },
-        {name:'Graziano', description: 'ciao'},
-        {name:'Luigi', description:'ciao' },
-        {name:'Morris', description:'ciao' },
-        {name:'Emilia', description:'ciao' },
-    
-        
+        {name:'Alberto', description: 'ciao', url:'/img/maccio.jpg'},
+        {name:'Leonardo', description:'ciao', url:'/img/leo.jpeg' },
+        {name:'Graziano', description: 'ciao', url:'/img/graziano.jpeg'},
+        {name:'Luigi', description:'ciao', url:'/img/luigi.jpeg' },
+        {name:'Morris', description:'ciao', url:'/img/morris.jpeg' },
+        {name:'Emilia', description:'ciao', url:'/img/maccio.jpg' },
+         
     ];
     
     programmers.forEach((programmer)=>{

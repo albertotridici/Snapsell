@@ -62,6 +62,8 @@ nav a{
     text-shadow: 1px 1px 1px black;
 }
 
+
+
 .sottotitoli{
     font-size: 4vw;
     text-shadow: 1px 1px 1px black;
@@ -922,6 +924,8 @@ a.cta i{
     z-index: 2;
     transition: 0.5s;
     cursor: pointer;
+    background-size: cover;
+
 }
 
 .programmers-card{
@@ -949,11 +953,11 @@ a.cta i{
 .inner-face{
     height: 450px;
     width: 350px;
-    background-image: url(/resources/img/Goblin.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     backface-visibility: hidden;
+    background-size: cover;
 }
 
 
@@ -978,9 +982,22 @@ a.cta i{
 
 }
 
+.h2-chiSiamo{
+    color: white;
+    font-size: 3vw;
+    text-shadow: 3px 3px 3px black;
+}
+
+@media screen and (min-width:0px) and (max-width:1023px){
+    .h2-chiSiamo{
+        color: white;
+        font-size: 40px;
+        text-shadow: 3px 3px 3px black;
+    }
+}
 
 .bg-chiSiamo{
-    background-image: url(/public/img/giochiHeader2.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url(/public/img/sfondochisiamo.jpg);
     background-position: center;
     background-size: cover;
 }
