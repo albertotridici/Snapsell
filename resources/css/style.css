@@ -1000,6 +1000,16 @@ a.cta i{
     background-position: center;
     background-size: cover;
 }
+
+.nome-card{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.description-card{
+    font-size: x-large;
+    font-weight: 500;
+}
 /* END chi siamo --------------------------------------------------------------------------------------------------------- */
 
 /* START animazioni card ------------------------------------------------------------------------------------------------- */
