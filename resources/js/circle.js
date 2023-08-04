@@ -1,7 +1,7 @@
 let opener = document.querySelector('.opener');
 let circle = document.querySelector('.circle');
 let check = true;
-let card = document.querySelector('.inner');
+let card = document.querySelector('.inner-face');
 let programmerName = document.querySelector('#programmer-name');
 let programmerDescription = document.querySelector('#programmer-description');
 let transparent = document.querySelector('#transparent');
@@ -9,7 +9,7 @@ let transparent = document.querySelector('#transparent');
 if (circle) {
     
     let programmers = [
-        {name:'Alberto', description: 'ciao'},
+        {name:'Alberto', description: 'ciao', url: 'img/musica.jpg'},
         {name:'Leonardo', description:'ciao' },
         {name:'Graziano', description: 'ciao'},
         {name:'Luigi', description:'ciao' },
@@ -35,6 +35,8 @@ if (circle) {
         check=false;
         movedDivs.forEach((moved, i)=>{
             let angle = (360 * i) / movedDivs.length;
+            moved.setAttribute('data-angle', angle); 
+            moved.setAttribute('id', programmers[i].name);        
             moved.style.transform = `rotate(${angle}deg) translate(200px) rotate(-${angle}deg)`;
         })
     
@@ -57,6 +59,14 @@ if (circle) {
                 programmerName.innerHTML = `Nome: ${programmers[i].name}`; 
                 programmerDescription.innerHTML = `${programmers[i].description}`;
                 transparent.classList.remove('d-none');
+
+                let movedAngle = +div.dataset.angle;
+                let exp = 360 - movedAngle;
+
+                movedDivs.forEach((moved)=>{
+                    let angle = +moved.dataset.angle;
+                    moved.style.transform = `rotate(${angle + exp}deg) translate(200px) rotate(-${angle + exp}deg)`;
+                });
             })
         })
 }
