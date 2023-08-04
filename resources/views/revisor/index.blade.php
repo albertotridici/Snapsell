@@ -20,23 +20,21 @@
 
     
     <div class="toast-container" data-bs-delay="10000">
-        <div id="liveToast" class="toast-custom" role="alert" aria-live="assertive" aria-atomic="true">
-            <div>
-                @if ($ultimo)
-                    <form action="{{route('revisor.null_announcement', ['announcement' => $ultimo])}}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="btn btn-danger"><i class="fa-solid fa-share fa-rotate-180"></i></button>
-                    </form>
-                @endif
-            </div>
-            <div>
-                <h6>Annulla</h6>
+        <div id="liveToast" class="toast toast-custom" role="alert" aria-live="assertive" aria-atomic="true">
+            @if ($ultimo)
+                <form action="{{route('revisor.null_announcement', ['announcement' => $ultimo])}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <button type="submit" class="btn btn-toast"><i class="fa-solid fa-share fa-rotate-180"></i></button>
+                </form>
+            @endif
+            <div class="body-toast">
+                <p><strong>Annulla</strong></p>
                 <p>Vuoi annullare l'ultima azione?</p>
             </div>
-            <div>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <div class="progress"></div>
         </div>
     </div>
+   
 </x-layout>

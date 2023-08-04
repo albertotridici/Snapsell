@@ -882,19 +882,6 @@ a.cta i{
 .bg-footer{
     background-color: rgb(233, 233, 233);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* End FOOTER ------------------------------------------------------------------------------------------------------------- */
 
 /* START chi siamo ------------------------------------------------------------------------------------------------------- */
@@ -1036,14 +1023,89 @@ a.cta i{
     }
 }
 /* END header di tutte le pagine tranne la home ------------------------------------------------------------------------------*/
+
+/* START toast revisor ------------------------------------------------------------------------------------------------------ */
 .toast-container{
     position: fixed;
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: #c03cc0;
 }
 .toast-custom{
     display: flex;
     align-items: center;
+    background-color: white;
+    padding: 15px 25px 15px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border: 0;
+    border-left: 6px solid #4070f4;
+    width: auto;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
 }
+.btn-toast{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: #4070f4;
+    color: #fff;
+    border-radius: 50%;
+    transition: 0.6s ease;
+}
+
+.btn-toast:hover{
+    background-color: #4070f4;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.45);
+}
+.body-toast{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+.body-toast p{
+    font-size: 16px;
+    font-weight: 400;;
+    color: #666666;
+    margin: 0;
+}
+.body-toast strong{
+    font-weight: 600;
+    color: #333;
+}
+.toast-custom .btn-close:focus{
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+.toast-custom .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+.toast-custom .progress:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070f4;
+}
+.progress.active:before{
+    animation: progress 5s linear forwards;
+}
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
+}
+/* END toast revisor -------------------------------------------------------------------------------------------------------- */
