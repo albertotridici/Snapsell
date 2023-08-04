@@ -1,12 +1,12 @@
 <x-layout>
     
-    <section class="container my-5 mt-5 pt-5 pb-5 bg-image">
+    {{-- <section class="container my-5 mt-5 pt-5 pb-5 bg-image">
         <div class="row">
             <div class="col-12 text-center">
                 <h1 class="h1-viste">Chi siamo</h1>
             </div>
         </div>
-    </section>
+    </section> --}}
     
     <section class="container-fluid min-vh-100 bg-chiSiamo">
         <div class="row vh-100">
@@ -31,6 +31,7 @@
                     <div class="inner">
                         <div class="inner-face position-relative"></div>
                         <div class="inner-back">
+                            <img src="/img/logo4.png" class="custom" alt="">
                             <p id="programmer-name">Nome</p>
                             <p id="programmer-description">Descrizione</p>
                         </div>   

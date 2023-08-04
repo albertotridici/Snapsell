@@ -890,8 +890,6 @@ a.cta i{
 .circle{
     height: 450px;
     width: 400px;
-    /* border-radius: 50%;
-    border: 2px solid  var(--col-vinted); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -909,7 +907,8 @@ a.cta i{
     transition: 0.5s;
     position: absolute;
     z-index: 3;
-    background-color: rgb(245, 245, 245);
+    background-color:var(--col-vinted);
+    color: white;
 }
 
 .moved{
@@ -963,6 +962,7 @@ a.cta i{
 .inner-back{
     height: 450px;
     width: 350px;
+    background-color: white;
     transform: rotateY(180deg);
     backface-visibility: hidden;
     position: relative;

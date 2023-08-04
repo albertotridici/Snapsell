@@ -15,8 +15,6 @@ if (circle) {
         {name:'Graziano', description: 'ciao', url:'/img/graziano.jpeg'},
         {name:'Luigi', description:'ciao', url:'/img/luigi.jpeg' },
         {name:'Morris', description:'ciao', url:'/img/morris.jpeg' },
-        {name:'Emilia', description:'ciao', url:'/img/maccio.jpg' },
-         
     ];
     
     programmers.forEach((programmer)=>{
@@ -61,7 +59,6 @@ if (circle) {
                 programmerName.innerHTML = `Nome: ${programmers[i].name}`; 
                 programmerDescription.innerHTML = `${programmers[i].description}`;
                 transparent.classList.remove('d-none');
-
 
                 let movedAngle = +div.dataset.angle;
                 let exp = 360 - movedAngle;
