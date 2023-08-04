@@ -1001,8 +1001,9 @@ a.cta i{
 .animation3{
     animation-delay: 2s;
 }
-/* END animazioni card --------------------------------------------------------------------------------------------------- */
+/* END animazioni card ------------------------------------------------------------------------------------------------------ */
 
+/* START header di tutte le pagine tranne la home ----------------------------------------------------------------------------*/
 .bg-category{
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url('./img/categorySfondo2.jpg');
     background-position: bottom;
@@ -1033,4 +1034,16 @@ a.cta i{
     .content-addAds-secondary{
         width: 780px;
     }
+}
+/* END header di tutte le pagine tranne la home ------------------------------------------------------------------------------*/
+.toast-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #c03cc0;
+}
+.toast-custom{
+    display: flex;
+    align-items: center;
 }
