@@ -937,7 +937,6 @@ a.cta i{
     height: 100%;
     width: 100%;
     border: 2px solid var(--col-vinted);
-    border-radius: 20px;
     transform-style: preserve-3d;
     background-position: center;
     background-size: 100%;
