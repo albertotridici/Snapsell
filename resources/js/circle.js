@@ -4,17 +4,19 @@ let check = true;
 let card = document.querySelector('.inner-face');
 let programmerName = document.querySelector('#programmer-name');
 let programmerDescription = document.querySelector('#programmer-description');
+let programmerLinkedin = document.querySelector('#programmer-linkedin');
 let transparent = document.querySelector('#transparent');
 let divSovrapposto = document.querySelector('#div-sovrapposto');
+
 
 if (circle) {
     
     let programmers = [
-        {name:'Alberto', description: 'ciao', url:'/img/maccio.jpg'},
-        {name:'Leonardo', description:'ciao', url:'/img/leo.jpeg' },
-        {name:'Graziano', description: 'ciao', url:'/img/graziano.jpeg'},
-        {name:'Luigi', description:'ciao', url:'/img/luigi.jpeg' },
-        {name:'Morris', description:'ciao', url:'/img/morris.jpeg' },
+        {name:'Alberto Tridici', description: 'Junior Web-Developer', url:'/img/maccio.jpg', linkedin:'https://www.linkedin.com/in/alberto-tridici-fullstackdeveloperjunior'},
+        {name:'Leonardo Lerario', description:'Junior Web-Developer', url:'/img/leo.jpeg', linkedin:'https://www.linkedin.com/in/leonardo-lerario-developer/' },
+        {name:'Graziano Calella', description: 'Junior Web-Developer', url:'/img/graziano.jpeg', linkedin:'https://www.linkedin.com/in/graziano-calella-fullstack-webdeveloper'},
+        {name:'Luigi Santillan', description:'Junior Web-Developer', url:'/img/luigi.jpeg', linkedin:'https://www.linkedin.com/in/luigisantillan-webdeveloper' },
+        {name:'Morris Vattiata', description:'Junior Web-Developer', url:'/img/morris.jpeg', linkedin:'https://www.linkedin.com/in/morris-vattiata-juniordeveloper' },
     ];
     
     programmers.forEach((programmer)=>{
@@ -56,8 +58,9 @@ if (circle) {
         movedDivs.forEach((div, i) => {
             div.addEventListener('click', ()=>{
                 card.style.backgroundImage = `url(${programmers[i].url})`;
-                programmerName.innerHTML = `Nome: ${programmers[i].name}`; 
+                programmerName.innerHTML = `${programmers[i].name}`; 
                 programmerDescription.innerHTML = `${programmers[i].description}`;
+                programmerLinkedin.href=`${programmers[i].linkedin}`
                 transparent.classList.remove('d-none');
 
                 let movedAngle = +div.dataset.angle;

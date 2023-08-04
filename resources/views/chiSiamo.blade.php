@@ -30,10 +30,15 @@
                 <div class="programmers-card d-none" id="transparent">
                     <div class="inner">
                         <div class="inner-face position-relative"></div>
-                        <div class="inner-back">
-                            <img src="/img/logo4.png" class="custom" alt="">
-                            <p id="programmer-name" class="fw-bold">Nome</p>
-                            <p id="programmer-description">Descrizione</p>
+                        <div class="inner-back container-fluid p-0">
+                            <div class="row h-100 ">
+                                <div class="col-12 d-flex flex-column justify-content-around align-items-center">
+                                    <img src="/img/logo4.png" class="custom" alt="">
+                                    <p class="nome-card" id="programmer-name"></p>
+                                    <p class="description-card" id="programmer-description"></p>
+                                    <a id="programmer-linkedin" target="blank" href=""><i class="fa-brands fa-3x fa-linkedin" style="color: #00afb9;"></i></a>
+                                </div>
+                            </div>
                         </div>   
                     </div>
                 </div>
