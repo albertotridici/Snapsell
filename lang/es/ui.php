@@ -18,6 +18,7 @@ return['allAnnouncement'=>'Aquí estan nuestros anuncios!',
        'h1-show'=>'Anuncio',
        'benvenuto'=>'Benvenidos',
        'zonaRevisore'=>'Zonas Revisores',
+<<<<<<< HEAD
        'TuttiGliAnnunci'=>'Mostrar anuncios:',
        'TuttiGliAnnunci2'=>'Todo en un lugar!',
        'Ricerca'=>'Encontrar resultados para:',
@@ -38,6 +39,8 @@ return['allAnnouncement'=>'Aquí estan nuestros anuncios!',
 
 
 
+=======
+>>>>>>> f859d609b651ee2882f807ebcf61d1165783fc00
 
 ];
 

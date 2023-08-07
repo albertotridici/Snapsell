@@ -726,7 +726,7 @@ a.cta i{
     border-radius: 15px;
     width: 100%;
 }
-.content-choose p{
+.acce-reje{
     padding: 0 0 10px;
     margin: 0;
     text-align: center;
@@ -1170,6 +1170,10 @@ a.cta i{
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url('./img/sfondoSearch.jpg');
     background-position: center;
 }
+.bg-show{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0, 0.3)), url('./img/sfondoDettaglio2.jpg');
+    background-position: center;
+}
 
 .container-header-secondary{
     height: 100vh;
@@ -1540,3 +1544,88 @@ textarea.form-control.is-invalid{
     }
 }
 /* END create ads ----------------------------------------------------------------------------------------------------------- */
+.contentReportAI{
+    display: flex;
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.contentReportAI::-webkit-scrollbar{
+    background-color: white;  
+    border-radius: 10px;
+    height: 10px;    
+  }
+.contentReportAI::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: var(--col-vinted);
+}
+.table-value{
+    display: flex;
+}
+.column-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.column-value{
+    display: flex;
+    flex-direction: column;
+    width: 56px;
+    align-items: center;
+    cursor: pointer;
+}
+.column-value:hover{
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255, 0.3));
+}
+.column-value > *:not(.content-foto){
+    padding: 5px 0;
+}
+.content-foto{
+    padding-bottom: 5px;
+}
+.scroll{
+    display: flex;
+}
+.content-tags{
+    padding: 10px;
+    padding-bottom: 0;
+    text-align: justify;
+}
+.content-tags > *:not(:first-child){
+    display: none;
+}
+.containerAI{
+    display: none;
+}
+.showAI{
+   display: block;
+}
+.content-btn-show{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.btn-show{
+    background-color: var(--col-vinted);
+    padding: 14px 0;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    width: 200px;
+    display: block;
+    text-align: center;
+}
+.btn-show:hover{
+    background-color: var(--col-vinted-custom);
+    color: white;
+}
+.btn-show:active{
+    background-color: var(--col-vinted-custom) !important;
+    color: white !important;
+    border-color: var(--col-vinted-custom) !important;
+
+}

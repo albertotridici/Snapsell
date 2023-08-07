@@ -3,6 +3,17 @@
     <section class="container-fluid vh-100 bg-chiSiamo">
         <div class="row h-100">
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center h-custom ">
+    <section class="container my-5 mt-5 pt-5 pb-5 bg-image">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="h1-viste">{{__('ui.footer2')}}</h1>
+            </div>
+        </div>
+    </section>
+    
+    <section class="container-fluid min-vh-100 bg-chiSiamo">
+        <div class="row">
+            <div class="col-6 col-md-6 d-flex justify-content-center align-items-center">
                 <div class="circle">
                     <div class="opener">
                         <i class="fa-solid fa-plus fa-3x"></i>

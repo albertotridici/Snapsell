@@ -4,7 +4,11 @@
             <div class="col-12 p-0">
                 <div class="container-header-secondary bg-allAds">
                     <div class="content-header watch transition">
+<<<<<<< HEAD
                         <h1 class="title-header">{{ __('ui.TuttiGliAnnunci') }} <br> <strong>{{ __('ui.TuttiGliAnnunci2') }}</strong></h1>
+=======
+                        <h1 class="title-header">Esplora la categoria: <br> <strong>{{__('ui.navbar1')}}</strong></h1>
+>>>>>>> f859d609b651ee2882f807ebcf61d1165783fc00
                         <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar mt-4">
                             @csrf
                             <div class="content-input-btn">
