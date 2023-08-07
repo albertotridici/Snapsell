@@ -3,7 +3,7 @@
     <section class="container my-5 mt-5 pt-5 pb-5 bg-image">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="h1-viste">Chi siamo</h1>
+                <h1 class="h1-viste">{{__('ui.footer2')}}</h1>
             </div>
         </div>
     </section>
@@ -25,8 +25,8 @@
                     <div class="inner">
                         <div class="inner-face"></div>
                         <div class="inner-back">
-                            <p id="programmer-name">Nome</p>
-                            <p id="programmer-description">Descrizione</p>
+                            <p id="programmer-name">{{__('ui.chisiamo1')}}</p>
+                            <p id="programmer-description">{{__('ui.chisiamo2')}}</p>
                         </div>
     
                     </div>

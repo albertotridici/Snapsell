@@ -16,4 +16,8 @@ return['allAnnouncement'=>'Ecco i nostri annunci',
        'success'=>'Effettuato con successo',
        'danger'=>'Operazione non riuscita',
        'h1-show'=>'Annuncio',
+       'index'=>'Esplora la categoria:',
+       'chisiamo1'=>'nome',
+       'chisiamo2'=>'descrizione',
+
 ];
