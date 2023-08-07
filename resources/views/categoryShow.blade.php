@@ -6,11 +6,7 @@
         <div class="col-12 p-0">
           <div class="container-header-secondary bg-category">
             <div class="content-header watch transition">
-<<<<<<< HEAD
               <h1 class="title-header">{{__('ui.Categoria')}} <br> <strong>{{$category->name}}</strong></h1>
-=======
-              <h1 class="title-header">{{__('ui.index')}} <br> <strong>{{$category->name}}</strong></h1>
->>>>>>> f859d609b651ee2882f807ebcf61d1165783fc00
               <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar mt-4">
                 @csrf
                 <div class="content-input-btn">

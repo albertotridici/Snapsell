@@ -3,30 +3,20 @@
     <section class="container-fluid vh-100 bg-chiSiamo">
         <div class="row h-100">
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center h-custom ">
-    <section class="container my-5 mt-5 pt-5 pb-5 bg-image">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="h1-viste">{{__('ui.footer2')}}</h1>
-            </div>
-        </div>
-    </section>
-    
-    <section class="container-fluid min-vh-100 bg-chiSiamo">
-        <div class="row">
-            <div class="col-6 col-md-6 d-flex justify-content-center align-items-center">
                 <div class="circle">
                     <div class="opener">
                         <i class="fa-solid fa-plus fa-3x"></i>
                     </div>   
                 </div>   
             </div>
+            
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-md-center h-custom">
                 <div id="div-sovrapposto">
-                        <div class="content-header watch transition d-flex flex-column align-items-center">
-                          <i id="arrow-up" class="fa-solid fa-arrow-up fa-4x d-none" style="color: #00afb9;"></i>
-                          <h2 class="h2-chiSiamo">{{ __('ui.chiSiamo') }}</h2>
-                          <i id="arrow-left" class="fa-solid fa-arrow-left fa-5x d-none" style="color: #00afb9;"></i>
-                        </div>
+                    <div class="content-header watch transition d-flex flex-column align-items-center">
+                        <i id="arrow-up" class="fa-solid fa-arrow-up fa-4x d-none" style="color: #00afb9;"></i>
+                        <h2 class="h2-chiSiamo">{{__('ui.chiSiamo')}}</h2>
+                        <i id="arrow-left" class="fa-solid fa-arrow-left fa-5x d-none" style="color: #00afb9;"></i>
+                    </div>
                 </div>
                 <div class="programmers-card d-none" id="transparent">
                     <div class="inner">
@@ -46,9 +36,5 @@
             </div>
         </div>
     </section>
-
-
-
-
-
+    
 </x-layout>
