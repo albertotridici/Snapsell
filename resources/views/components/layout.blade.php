@@ -43,9 +43,15 @@
                 let messageModal = new bootstrap.Modal(document.querySelector('#alertSuccess'));
                 messageModal.show();
                 
+                let progress = document.querySelector(".progress");
+                let timer;
+                let toast = new bootstrap.Toast(document.querySelector('#liveToast'));
                 messageModal._element.addEventListener('hide.bs.modal', function() {
-                    let toast = new bootstrap.Toast(document.querySelector('#liveToast'));
                     toast.show()
+                    progress.classList.add("active");
+                    timer = setTimeout(() => {
+                        progress.classList.remove("active");
+                    }, 10000);
                 });
             });
         </script>

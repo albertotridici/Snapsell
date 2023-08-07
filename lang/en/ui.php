@@ -19,4 +19,7 @@ return['allAnnouncement'=>'Here\'s all our announcements!',
        'index'=>'Explore the category:',
        'chisiamo1'=>'name',
        'chisiamo2'=>'description',
+       'benvenuto'=>'Welcome',
+       'zonaRevisore'=>'Revisor Zone'
+
 ];

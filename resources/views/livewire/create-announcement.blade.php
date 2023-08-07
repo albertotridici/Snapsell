@@ -1,63 +1,118 @@
-<div>
+<div class="container-form-createAds">
     <form wire:submit.prevent="store">
         @csrf
-        <div class="mb-3">
-            <label for="title" class="form-label">Titolo Annuncio</label>
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.lazy="title">
-            @error('title')
-                <div class="alert alert-danger">{{$message}}</div>
-            @enderror
+        <div class="input-field @error('title') is-invalid @enderror">
+            <div class="content-icon-formAds">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <input type="text" placeholder="Titolo annuncio" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.lazy="title">
         </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Descrizione</label>
-            <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" wire:model.lazy="description">
-            @error('description')
-                <div class="alert alert-danger">{{$message}}</div>
-            @enderror
+        @error('title')
+            <div class="alert alert-danger">{{$message}}</div>
+        @enderror
+
+        <div class="input-field-textarea @error('description') is-invalid @enderror">
+            <div class="content-icon-formAds">
+                <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <textarea type="text" rows="3" placeholder="Descrizione annuncio" class="form-control @error('description') is-invalid @enderror" id="description" wire:model.lazy="description">
             </textarea>
         </div>
-        <div class="mb-3">
-            <label for="price" class="form-label">Prezzo</label>
-            <input type="number" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price" wire:model.lazy="price">
-            @error('price')
-                <div class="alert alert-danger">{{$message}}</div>
-            @enderror
+        @error('description')
+            <div class="alert alert-danger">{{$message}}</div>
+        @enderror
+
+        <div class="input-field @error('price') is-invalid @enderror">
+            <div class="content-icon-formAds">
+                <i class="fa-solid fa-euro-sign"></i>
+            </div>
+            <input type="number" placeholder="Prezzo annuncio" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price" wire:model.lazy="price">
         </div>
-        <div class="mb-3">
-            <label for="category" class="form-label">Categoria</label>
-            <select id="category" class="form-control" wire:model.defer="category">
+        @error('price')
+            <div class="alert alert-danger">{{$message}}</div>
+        @enderror
+
+        <div class="input-field  @error('category') is-invalid @enderror">
+            <div class="content-icon-formAds">
+                <i class="fa-solid fa-list"></i>
+            </div>
+            <select id="category" role="button" class="form-control @error('category') is-invalid @enderror" wire:model.defer="category">
                 <option value="">Scegli la categoria</option>
                 @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
             </select>
         </div>
-        <div class="mb-3">
-            <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror">
-            @error('temporary_images.*')
-                <div class="alert alert-danger">{{$message}}</div>
-            @enderror
+        @error('category')
+            <div class="alert alert-danger">{{$message}}</div>
+        @enderror
+
+
+        <div class="input-field-file @error('temporary_images.*') is-invalid @enderror">
+            <label class="cover-file" for="file"><i class="fa-solid fa-file-image"></i></label>
+            <input id="file" wire:model="temporary_images" type="file" name="images" multiple class=" form-control @error('temporary_images.*') is-invalid @enderror">
         </div>
+        @error('temporary_images.*')
+            <div class="alert alert-danger">{{$message}}</div>
+        @enderror
+
         @if (!empty($images))
-            <div class="row">
-                <div class="col-12">
-                    <p>foto preview:</p>
-                    <div class="row border-4 border border-info rounded py-4">
+            <div class="content-uploadForce">
+                <p>Non caricano le immagini?  Clicca qui:</p>
+                <button type="button" class="btn" onclick="initializeSwiper()">
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                </button>
+            </div>
+            <div class="container-swiperCreateAds">
+                <div thumbsSlider="" class="swiper swiperCreateAds">
+                    <div class="swiper-wrapper">
                         @foreach ($images as $key => $image)
-                            <div class="col my-3">
-                                <div class="mx-auto rounded img-preview" style="background-image: url({{$image->temporaryUrl()}});">
-                               </div>
-                                <div class="mx-auto rounded" style="height:500px; width:500px; background-image: url({{$image->temporaryUrl()}});"></div>
-                               <button type="button" class="btn btn-danger d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">
-                            Cancella</button>
+                            <div class="swiper-slide">
+                                <img class="imgCreate" src="{{$image->temporaryUrl()}}" onload="checkAllImagesLoaded()">
+                                <button type="button" class="btn btn-deleteImage" wire:click="removeImage({{$key}})"><i class="fa-solid fa-xmark"></i></button>
                             </div>
                         @endforeach
                     </div>
                 </div>
             </div>
         @endif
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <button type="submit" class="btn-createAds">Crea annuncio</button>
     </form>
+
+    <script>
+        window.addEventListener('onContentChanged', () => {
+            initializeSwiper();
+        });
+        let imagesLoaded = false;
+        function checkAllImagesLoaded() {
+            let images = document.querySelectorAll('.imgCreate');
+
+            images.forEach((num) => {
+                if(!num.complete){
+                    return;
+                }
+            });
+           
+            if (!imagesLoaded) {
+                initializeSwiper()
+                imagesLoaded = true; 
+            }
+        }
+        function initializeSwiper() {
+            let swiperCreateAds = new Swiper(".swiperCreateAds", {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+
+                mousewheel: {
+                releaseOnEdges: true,
+                },
+            });
+        }
+    </script>
+
     @if (session()->has('message'))
         <script>
                 let messageModal = new bootstrap.Modal(document.querySelector('#alertSuccess'));
@@ -70,4 +125,3 @@
     @endif
     <x-alertSuccess></x-alertSuccess>
 </div>
-

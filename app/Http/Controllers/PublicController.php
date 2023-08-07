@@ -14,12 +14,14 @@ class PublicController extends Controller
     }
 
     public function categoryShow(Category $category){
-        return view('categoryShow', compact('category'));
+        $announcements = Announcement::where('category_id', $category->id)->where('is_accepted', true)->get()->sortDesc();
+        return view('categoryShow', compact('category', 'announcements'));
     }
 
     public function searchAnnouncements(Request $request){
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(6);
-        return view('announcement/searched', compact('announcements'));
+        $cercato = $request->searched;
+        return view('announcement/searched', compact('announcements', 'cercato'));
     }
 
     public function setLanguage($lang){

@@ -4,7 +4,7 @@
             <div class="col-12 p-0">
                 <div class="container-header-secondary bg-allAds">
                     <div class="content-header watch transition">
-                        <h1 class="title-header">{{__('ui.index')}}<br> <strong>{{__('ui.navbar1')}}</strong></h1>
+                        <h1 class="title-header">Esplora la categoria: <br> <strong>{{__('ui.navbar1')}}</strong></h1>
                         <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar mt-4">
                             @csrf
                             <div class="content-input-btn">
