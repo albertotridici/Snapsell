@@ -42,7 +42,7 @@
                   <button class="btn btn-searchbar" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <div>
-                  <input name="searched" class="form-control" placeholder="Cerca nel sito..." aria-label="search" type="search">
+                  <input name="searched" class="form-control" placeholder="{{__('ui.placeholderSearch')}}..." aria-label="search" type="search">
                 </div>
               </div>
             </form>

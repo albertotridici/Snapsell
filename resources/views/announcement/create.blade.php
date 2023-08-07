@@ -5,10 +5,10 @@
                 <div class="panels-container col-12 col-md-5">
                     <div class="panel">
                         <div class="text-white">
-                            <h3>Crea un nuovo annuncio</h3>
-                            <p class="m-0">Non sai da dove cominciare? </p>
-                            <p class="m-0 pt-0">Lasciati ispirare dalle offerte già presenti e crea un nuovo annuncio che catturi l'attenzione del pubblico!</p>
-                            <a href="{{route('announcement.index')}}" class="btn-rl">annunci</a>
+                            <h3>{{__('ui.home1')}}</h3>
+                            <p class="m-0">{{__('ui.Create2')}} </p>
+                            <p class="m-0 pt-0">{{__('ui.Create3')}}</p>
+                            <a href="{{route('announcement.index')}}" class="btn-rl">{{__('ui.Annunci')}}</a>
                         </div>
                         <img src="/media/createAds.svg" alt="image create ads" class="image">
                     </div>

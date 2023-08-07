@@ -13,7 +13,7 @@
                 <div id="div-sovrapposto">
                         <div class="content-header watch transition d-flex flex-column align-items-center">
                           <i id="arrow-up" class="fa-solid fa-arrow-up fa-4x d-none" style="color: #00afb9;"></i>
-                          <h2 class="h2-chiSiamo">Clicca qui per scoprire di più</h2>
+                          <h2 class="h2-chiSiamo">{{ __('ui.chiSiamo') }}</h2>
                           <i id="arrow-left" class="fa-solid fa-arrow-left fa-5x d-none" style="color: #00afb9;"></i>
                         </div>
                 </div>

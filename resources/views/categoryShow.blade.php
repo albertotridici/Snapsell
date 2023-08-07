@@ -6,7 +6,7 @@
         <div class="col-12 p-0">
           <div class="container-header-secondary bg-category">
             <div class="content-header watch transition">
-              <h1 class="title-header">Esplora la categoria: <br> <strong>{{$category->name}}</strong></h1>
+              <h1 class="title-header">{{__('ui.Categoria')}} <br> <strong>{{$category->name}}</strong></h1>
               <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar mt-4">
                 @csrf
                 <div class="content-input-btn">
@@ -14,7 +14,7 @@
                     <button class="btn btn-searchbar" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                   </div>
                   <div>
-                    <input name="searched" class="form-control" placeholder="Cerca nel sito..." aria-label="search" type="search">
+                    <input name="searched" class="form-control" placeholder="{{__('ui.placeholderSearch')}}..." aria-label="search" type="search">
                   </div>
                 </div>
               </form>
@@ -63,13 +63,13 @@
         <div class="col-12 p-0">
           <div class="container-header-secondary bg-category">
             <div class="content-header watch transition">
-              <h1 class="title-header">Esplora la categoria: <br> <strong>{{$category->name}}</strong></h1>
+              <h1 class="title-header">{{__('ui.Categoria')}} <br> <strong>{{$category->name}}</strong></h1>
               <div class="content-addAds content-addAds-secondary">
                 <div class="col-12 col-lg-6">
-                  <p class="description-category">Non ci sono annunci: <br><strong>Fatti notare, pubblicane uno!</strong></p>
+                  <p class="description-category">{{__('ui.Ricerca2')}} <br><strong>{{__('ui.Ricerca3')}}</strong></p>
                 </div>
                 <div class="col-12 col-lg-6 content-btn-header">
-                  <a href="{{route('announcement.create')}}" class="cta-header"><i class="fa-solid fa-hand-holding-dollar"></i>Crea nuovo annuncio</a>
+                  <a href="{{route('announcement.create')}}" class="cta-header"><i class="fa-solid fa-hand-holding-dollar"></i>{{__('ui.home1')}}</a>
                 </div>
               </div>
               <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar">
@@ -79,7 +79,7 @@
                     <button class="btn btn-searchbar" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                   </div>
                   <div>
-                    <input name="searched" class="form-control" placeholder="Cerca nel sito..." aria-label="search" type="search">
+                    <input name="searched" class="form-control" placeholder="{{__('ui.placeholderSearch')}}..." aria-label="search" type="search">
                   </div>
                 </div>
               </form>

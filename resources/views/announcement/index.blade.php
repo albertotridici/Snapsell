@@ -4,7 +4,7 @@
             <div class="col-12 p-0">
                 <div class="container-header-secondary bg-allAds">
                     <div class="content-header watch transition">
-                        <h1 class="title-header">Vetrina annunci: <br> <strong>Tutto in un unico posto!</strong></h1>
+                        <h1 class="title-header">{{ __('ui.TuttiGliAnnunci') }} <br> <strong>{{ __('ui.TuttiGliAnnunci2') }}</strong></h1>
                         <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar mt-4">
                             @csrf
                             <div class="content-input-btn">
@@ -12,7 +12,7 @@
                                 <button class="btn btn-searchbar" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
                             <div>
-                                <input name="searched" class="form-control" placeholder="Cerca nel sito..." aria-label="search" type="search">
+                                <input name="searched" class="form-control" placeholder="{{__('ui.placeholderSearch')}}..." aria-label="search" type="search">
                             </div>
                             </div>
                         </form>

@@ -37,7 +37,7 @@
                 <i class="fa-solid fa-list"></i>
             </div>
             <select id="category" role="button" class="form-control @error('category') is-invalid @enderror" wire:model.defer="category">
-                <option value="">Scegli la categoria</option>
+                <option value="">{{__('ui.Create4')}}</option>
                 @foreach ($categories as $category)
                     <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
@@ -58,7 +58,7 @@
 
         @if (!empty($images))
             <div class="content-uploadForce">
-                <p>Non caricano le immagini?  Clicca qui:</p>
+                <p>{{__('ui.Create5')}}</p>
                 <button type="button" class="btn" onclick="initializeSwiper()">
                     <i class="fa-solid fa-arrow-rotate-right"></i>
                 </button>
@@ -77,7 +77,7 @@
             </div>
         @endif
 
-        <button type="submit" class="btn-createAds">Crea annuncio</button>
+        <button type="submit" class="btn-createAds">{{__('ui.create')}}</button>
     </form>
 
     <script>

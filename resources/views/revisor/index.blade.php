@@ -5,9 +5,9 @@
                 <div class="container-header-secondary bg-revisor">
                     <div class="content-header watch transition">
                         @if ($announcement_to_check)
-                            <h1 class="title-header">Ecco l'annuncio da revisionare:<br> <strong>{{$announcement_to_check->title}}</strong></h1>
+                            <h1 class="title-header">{{ __('ui.revisor') }}<br> <strong>{{$announcement_to_check->title}}</strong></h1>
                         @else
-                            <h1 class="title-header">Ecco l'annuncio da revisionare:<br> <strong>Non ci sono annunci</strong></h1>
+                            <h1 class="title-header">{{ __('ui.revisor') }}<br> <strong>{{ __('ui.revisor2') }}</strong></h1>
                         @endif
                     </div>
                 </div>
@@ -28,8 +28,8 @@
                 </form>
             @endif
             <div class="body-toast">
-                <p><strong>Annulla</strong></p>
-                <p>Vuoi annullare l'ultima azione?</p>
+                <p><strong>{{ __('ui.annulla') }}</strong></p>
+                <p>{{ __('ui.annulla2') }}</p>
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             <div class="progress"></div>
