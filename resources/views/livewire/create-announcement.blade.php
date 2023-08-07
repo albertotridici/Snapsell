@@ -5,7 +5,7 @@
             <div class="content-icon-formAds">
                 <i class="fa-solid fa-pen-to-square"></i>
             </div>
-            <input type="text" placeholder="Titolo annuncio" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.lazy="title">
+            <input type="text" placeholder="{{__('ui.placeholderCreate')}}" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.lazy="title">
         </div>
         @error('title')
             <div class="alert alert-danger">{{$message}}</div>
@@ -15,7 +15,7 @@
             <div class="content-icon-formAds">
                 <i class="fa-solid fa-newspaper"></i>
             </div>
-            <textarea type="text" rows="3" placeholder="Descrizione annuncio" class="form-control @error('description') is-invalid @enderror" id="description" wire:model.lazy="description">
+            <textarea type="text" rows="3" placeholder="{{__('ui.placeholderCreate2')}}" class="form-control @error('description') is-invalid @enderror" id="description" wire:model.lazy="description">
             </textarea>
         </div>
         @error('description')
@@ -26,7 +26,7 @@
             <div class="content-icon-formAds">
                 <i class="fa-solid fa-euro-sign"></i>
             </div>
-            <input type="number" placeholder="Prezzo annuncio" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price" wire:model.lazy="price">
+            <input type="number" placeholder="{{__('ui.placeholderCreate3')}}" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price" wire:model.lazy="price">
         </div>
         @error('price')
             <div class="alert alert-danger">{{$message}}</div>

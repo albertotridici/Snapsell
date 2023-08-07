@@ -35,5 +35,8 @@ return['allAnnouncement'=>'Ecco i nostri annunci',
        'Create4'=>'Scegli la categoria',
        'Create5'=>'Non caricano le immagini?  Clicca qui:',
        'placeholderSearch'=> 'Cerca nel sito',
+       'placeholderCreate'=>'Titolo annuncio',
+       'placeholderCreate2'=>'Descrizione annuncio',
+       'placeholderCreate3'=>'Prezzo annuncio',
 
 ];

@@ -35,6 +35,12 @@ return['allAnnouncement'=>'Aquí estan nuestros anuncios!',
        'Create4'=>'Elige la categoria',
        'Create5'=>'No suben fotos? Haga clic aqui:',
        'placeholderSearch'=> 'Busqueda de sitio',
+       'placeholderCreate'=>'Titulo del anuncio',
+       'placeholderCreate2'=>'Description del anuncio',
+       'placeholderCreate3'=>'Precio del anuncio',
+
+
+
 
 
 

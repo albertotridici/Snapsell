@@ -67,11 +67,7 @@
         <div class="col-12 p-0">
           <div class="container-header-secondary bg-category">
             <div class="content-header watch transition">
-<<<<<<< HEAD
               <h1 class="title-header">{{__('ui.Categoria')}} <br> <strong>{{$category->name}}</strong></h1>
-=======
-              <h1 class="title-header">{{__('ui.index')}} <br> <strong>{{$category->name}}</strong></h1>
->>>>>>> f859d609b651ee2882f807ebcf61d1165783fc00
               <div class="content-addAds content-addAds-secondary">
                 <div class="col-12 col-lg-6">
                   <p class="description-category">{{__('ui.Ricerca2')}} <br><strong>{{__('ui.Ricerca3')}}</strong></p>

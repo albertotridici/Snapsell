@@ -36,6 +36,11 @@ return['allAnnouncement'=>'Here\'s all our announcements!',
        'Create4'=>'Choose the category',
        'Create5'=>'Won\'t they upload pictures? Click here:',
        'placeholderSearch'=> 'Site search',
+       'placeholderCreate'=>'Add title',
+       'placeholderCreate2'=>'Add description',
+       'placeholderCreate3'=>'Add price',
+
+
 
 
 
