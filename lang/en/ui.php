@@ -39,7 +39,7 @@ return['allAnnouncement'=>'Here\'s all our announcements!',
        'placeholderCreate'=>'Add title',
        'placeholderCreate2'=>'Add description',
        'placeholderCreate3'=>'Add price',
-       'dettaglio'=>'Visualize in detail:',
+       'dettaglio'=>'View in detail:',
 
 
 
