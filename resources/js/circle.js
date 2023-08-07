@@ -12,7 +12,7 @@ let divSovrapposto = document.querySelector('#div-sovrapposto');
 if (circle) {
     
     let programmers = [
-        {name:'Alberto Tridici', description: 'Junior Web-Developer', url:'/img/maccio.jpg', linkedin:'https://www.linkedin.com/in/alberto-tridici-fullstackdeveloperjunior'},
+        {name:'Alberto Tridici', description: 'Junior Web-Developer', url:'/img/alberto.jpg', linkedin:'https://www.linkedin.com/in/alberto-tridici-fullstackdeveloperjunior'},
         {name:'Leonardo Lerario', description:'Junior Web-Developer', url:'/img/chisiamoLeo.jpg', linkedin:'https://www.linkedin.com/in/leonardo-lerario-developer/' },
         {name:'Graziano Calella', description: 'Junior Web-Developer', url:'/img/graziano.jpeg', linkedin:'https://www.linkedin.com/in/graziano-calella-fullstack-webdeveloper'},
         {name:'Luigi Santillan', description:'Junior Web-Developer', url:'/img/luigi.jpeg', linkedin:'https://www.linkedin.com/in/luigisantillan-webdeveloper' },
