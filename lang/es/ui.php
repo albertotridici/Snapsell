@@ -38,6 +38,8 @@ return['allAnnouncement'=>'Aquí estan nuestros anuncios!',
        'placeholderCreate'=>'Titulo del anuncio',
        'placeholderCreate2'=>'Description del anuncio',
        'placeholderCreate3'=>'Precio del anuncio',
+       'dettaglio'=>'Ver en detalle:',
+
 
 
 

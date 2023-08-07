@@ -4,7 +4,7 @@
             <div class="col-12 p-0">
                 <div class="container-header-secondary bg-show">
                     <div class="content-header watch transition">
-                        <h1 class="title-header">Visualizza nel dettaglio: <br> <strong>{{$announcement->title}}</strong></h1>
+                        <h1 class="title-header">{{__('ui.dettaglio')}} <br> <strong>{{$announcement->title}}</strong></h1>
                         <form action="{{route('announcements.search')}}" method="GET" class="form-searchbar mt-4">
                             @csrf
                             <div class="content-input-btn">
