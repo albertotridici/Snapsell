@@ -16,4 +16,7 @@ return['allAnnouncement'=>'Here\'s all our announcements!',
        'success'=>'Successfully completed',
        'danger'=>'Operation failed',
        'h1-show'=>'Announcement',
+       'benvenuto'=>'Welcome',
+       'zonaRevisore'=>'Revisor Zone'
+
 ];

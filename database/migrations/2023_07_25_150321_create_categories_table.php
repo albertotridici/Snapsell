@@ -15,14 +15,11 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('name_en');
+            $table->string('name_es');
             $table->timestamps();
         });
 
-        $categories = ['Motori', 'Informatica', 'Elettrodomestici', 'Giochi', 'Sport', 'Arredamento', 'Musica', 'Abbigliamento', 'Libri', 'Telefonia'];
-        
-        foreach($categories as $category){
-            Category::create(['name' => $category]);
-        }
     }
 
     /**

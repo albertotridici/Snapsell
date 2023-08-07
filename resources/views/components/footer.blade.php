@@ -10,26 +10,23 @@
         </div>
         <div class="col-md-2 col-lg-4 mx-auto mb-4">
           <h6 class="text-center text-uppercase fw-bold mb-4" style="color: #00afb9;">{{__('ui.footer1')}}</h6>
-          <p class="text-center d-inline">
+          <p class="text-center">
             <a href="#!" target="blank" class="text-reset">Html</a>
           </p>
-          <p class="text-center d-inline">
+          <p class="text-center">
             <a href="#!" class="text-reset">Css</a>
           </p>
-          <p class="text-center d-inline">
+          <p class="text-center">
             <a href="#!" class="text-reset">Javascript</a>
           </p>
-          <p class="text-center d-inline">
+          <p class="text-center">
             <a href="#!" class="text-reset">PHP</a>
           </p>
-          <p class="text-center d-inline">
-            <a href="#!" class="text-reset">Bootstrap</a>
-          </p>
-          <p class="text-center d-inline">
+          <p class="text-center">
             <a href="#!" class="text-reset">Laravel</a>
           </p>
         </div>
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 d-flex justify-content-center align-items-center flex-column">
           <p><i class="fa-solid fa-2x fa-users me-3" style="color: #00afb9;"></i><a href="{{route('chiSiamo')}}" class="a-footer">{{__('ui.footer2')}}</a></p>
           <p><i class="fa-solid fa-2x fa-handshake-angle me-3" style="color: #00afb9;"></i><a href="{{route('become.revisor')}}" class="a-footer">{{__('ui.footer3')}}</a></p>
         </div>
