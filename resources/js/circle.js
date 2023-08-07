@@ -46,6 +46,7 @@ if (circle) {
                 moved.setAttribute('id', programmers[i].name);
                 moved.style.transform = `rotate(${angle}deg) translate(100px) rotate(-${angle}deg)`;
                 divSovrapposto.classList.add('d-none');
+                programmerLinkedin.classList.add('d-none')
             })
         
         
@@ -61,21 +62,17 @@ if (circle) {
             
         }
 
+        programmerLinkedin.addEventListener('click', ()=>{
+        });
+
                 movedDivs.forEach((div, i) => {
             div.addEventListener('click', ()=>{
                 card.style.backgroundImage = `url(${programmers[i].url})`;
                 programmerName.innerHTML = `${programmers[i].name}`; 
                 programmerDescription.innerHTML = `${programmers[i].description}`;
-                programmerLinkedin.href=`${programmers[i].linkedin}`
+                programmerLinkedin.href=`${programmers[i].linkedin}`;
                 transparent.classList.remove('d-none');
 
-            //     let movedAngle = +div.dataset.angle;
-            //     let exp = 360 - movedAngle;
-
-            //     movedDivs.forEach((moved)=>{
-            //         let angle = +moved.dataset.angle;
-            //         moved.style.transform = `rotate(${angle + exp}deg) translate(100px) rotate(-${angle + exp}deg)`;
-            // });
         })
     })
  
@@ -131,22 +128,15 @@ if (circle) {
 
     });
     
-    //     movedDivs.forEach((div, i) => {
-    //         div.addEventListener('click', ()=>{
-    //             card.style.backgroundImage = `url(${programmers[i].url})`;
-    //             programmerName.innerHTML = `${programmers[i].name}`; 
-    //             programmerDescription.innerHTML = `${programmers[i].description}`;
-    //             programmerLinkedin.href=`${programmers[i].linkedin}`
-    //             transparent.classList.remove('d-none');
+    let arrowLeft = document.querySelector('#arrow-left');
+    let arrowUp = document.querySelector('#arrow-up');
 
-    //             let movedAngle = +div.dataset.angle;
-    //             let exp = 360 - movedAngle;
 
-    //             movedDivs.forEach((moved)=>{
-    //                 let angle = +moved.dataset.angle;
-    //                 moved.style.transform = `rotate(${angle + exp}deg) translate(200px) rotate(-${angle + exp}deg)`;
-    //         });
-    //     })
-    // })
+
+    if (smallWidth < 400) {
+        arrowUp.classList.remove('d-none')
+    }else{
+        arrowLeft.classList.remove('d-none')
+    }
 
 }
