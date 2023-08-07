@@ -1,13 +1,5 @@
 <x-layout>
     
-    {{-- <section class="container my-5 mt-5 pt-5 pb-5 bg-image">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="h1-viste">Chi siamo</h1>
-            </div>
-        </div>
-    </section> --}}
-    
     <section class="container-fluid min-vh-100 bg-chiSiamo">
         <div class="row vh-100">
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
