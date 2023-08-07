@@ -17,11 +17,7 @@ return['allAnnouncement'=>'Aquí estan nuestros anuncios!',
        'danger'=>'Operación fallida',
        'h1-show'=>'Anuncio',
        'benvenuto'=>'Benvenidos',
-       'zonaRevisore'=>'Zonas Revisores'
-
-       'index'=>'Explora la categoría:',
-       'chisiamo1'=>'nombre',
-       'chisiamo2'=>'descripción',
+       'zonaRevisore'=>'Zonas Revisores',
 
 ];
 

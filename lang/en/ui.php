@@ -16,9 +16,7 @@ return['allAnnouncement'=>'Here\'s all our announcements!',
        'success'=>'Successfully completed',
        'danger'=>'Operation failed',
        'h1-show'=>'Announcement',
-       'index'=>'Explore the category:',
-       'chisiamo1'=>'name',
-       'chisiamo2'=>'description',
+       
        'benvenuto'=>'Welcome',
        'zonaRevisore'=>'Revisor Zone'
 
