@@ -109,7 +109,7 @@
                     @if (Route::currentRouteName() == 'revisor.index')
                         <div class="row content-choose">
                             <div class="col-6 p-0">
-                                <p>Accetta</p>
+                                {{-- <p class="acce-reje">Accetta</p> --}}
                                 <form action="{{route('revisor.accept_announcement', ['announcement' => $announcement])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
@@ -117,33 +117,76 @@
                                 </form>
                             </div>
                             <div class="col-6 p-0">
-                                <p>Rifiuta</p>
+                                {{-- <p class="acce-reje">Rifiuta</p> --}}
                                 <form action="{{route('revisor.reject_announcement', ['announcement' => $announcement])}}" method="POST">
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn btn-revisor-reject" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Rifiuta" data-bs-custom-class="tooltip-revisor-reject"><i class="fa-solid fa-xmark"></i></button>
                                 </form>
                             </div>
-                        </div>
-                        <div class="mt-3">
-                            @foreach ($announcement->images as $image)
-                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                            <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                            <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                            <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                            <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
-                        </div>
-                        <div class="mt-3">
-                            @if ($image->labels)
-                                @foreach ($image->labels as $label)
-                                  <p class="d-inline">{{$label}}</p>  
-                                @endforeach                                
-                            @endif
-                            @endforeach
+                            <div class="content-btn-show col-12">
+                                <button class="btn btn-show dropdown-toggle" type="button">Mostra report AI</button>
+                            </div>
+                            <div class="containerAI col-12">
+                                <div class="contentReportAI">
+                                    <div class="scroll">
+                                        <div class="column-category">
+                                            <div class="opacity-0">Categorie</div>
+                                            <div>Adulti:</div>
+                                            <div>Satira:</div>
+                                            <div>Medicina:</div>
+                                            <div>Violenza:</div>
+                                            <div>Provocatorio:</div>
+                                        </div>
+                                        <div class="table-value">
+                                            @foreach ($announcement->images as $key => $image)
+                                            <div onclick="showTag({{$key}})" class="column-value">
+                                                <div class="content-foto">Foto {{$key + 1}}</div>
+                                                <div class="{{$image->adult}}"></div>
+                                                <div class="{{$image->spoof}}"></div>
+                                                <div class="{{$image->medical}}"></div>
+                                                <div class="{{$image->violence}}"></div>
+                                                <div class="{{$image->racy}}"></div>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-tags">
+                                    @foreach ($announcement->images as $key => $image)
+                                        @if ($image->labels)
+                                            <div class="tag-{{$key}}">
+                                                <p class="acce-reje">Tags foto {{$key + 1}}</p>
+                                                @foreach ($image->labels as $label)
+                                                    <p class="d-inline">{{$label}},</p>  
+                                                @endforeach  
+                                            </div>                              
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
                         </div>
                     @endif
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function showTag(id){
+            let tag = document.querySelector(`.tag-${id}`);
+            let tags = document.querySelectorAll('[class^="tag-"]');
+            
+            tags.forEach((tag) => {
+                tag.classList.add('d-none');
+            });
+            tag.classList.remove('d-none');
+            tag.classList.add('d-block');
+        }
+        let btnShow = document.querySelector('.btn-show');
+        let containerAI = document.querySelector('.containerAI');
+
+        btnShow.addEventListener('click', ()=>{
+            containerAI.classList.toggle('showAI');
+        });
+    </script>
 </div>
