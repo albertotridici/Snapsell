@@ -59,11 +59,13 @@ class CreateAnnouncement extends Component
     public function removeImage($key){
         if(in_array($key, array_keys($this->images))){
             unset($this->images[$key]);
+            $this->dispatchBrowserEvent('onContentChanged');
         }
     }
 
     public function updated($propertyName){
         $this->validateOnly($propertyName);
+        $this->dispatchBrowserEvent('onContentChanged');
     }
 
     public function store(){
@@ -113,4 +115,5 @@ class CreateAnnouncement extends Component
     {
         return view('livewire.create-announcement');
     }
+
 }

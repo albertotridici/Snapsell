@@ -18,7 +18,6 @@
         <x-cardShow :announcement="$announcement_to_check"></x-cardShow>
     @endif
 
-    
     <div class="toast-container" data-bs-delay="10000">
         <div id="liveToast" class="toast toast-custom" role="alert" aria-live="assertive" aria-atomic="true">
             @if ($ultimo)
@@ -36,5 +35,4 @@
             <div class="progress"></div>
         </div>
     </div>
-   
 </x-layout>
