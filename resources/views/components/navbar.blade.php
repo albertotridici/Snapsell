@@ -58,16 +58,16 @@
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle px-4 py-2" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Benvenuto {{ Auth::user()->name }}
+                        {{ __('ui.benvenuto') }} {{ Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu p-0 m-0">
-                        <li><a class="dropdown-item dropd-item" href="{{ route('announcement.create') }}">Crea Annuncio</a>
+                        <li><a class="dropdown-item dropd-item" href="{{ route('announcement.create') }}">{{ __('ui.create') }}</a>
                         </li>
                         @if (Auth::user()->is_revisor)
                             <li>
                                 <a class="dropdown-item dropd-item btn btn-outline-success btn-sm position-relative"
                                     aria-current="page" href="{{ route('revisor.index') }}">
-                                    Zona Revisore
+                                    {{ __('ui.zonaRevisore') }}
                                     <span
                                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-notification">
                                         {{ App\Models\Announcement::toBeRevisionedCount() }}

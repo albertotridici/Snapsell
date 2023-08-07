@@ -16,4 +16,6 @@ return['allAnnouncement'=>'Ecco i nostri annunci',
        'success'=>'Effettuato con successo',
        'danger'=>'Operazione non riuscita',
        'h1-show'=>'Annuncio',
+       'benvenuto'=>'Benvenuto',
+       'zonaRevisore'=>'Zona Revisore'
 ];
