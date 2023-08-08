@@ -5,13 +5,16 @@
 body{
     background-color:rgb(245, 245, 245);
 }
+
 .bg-image{
     color: rgb(0, 175, 185) !important; 
 }
+
 nav a{
     font-size: 20px !important;
     color: #17c6cf !important; 
     text-shadow: 1px 1px 1px black;
+    font-weight: 600 !important;
 }
 
 .custom{

@@ -33,11 +33,9 @@ if (circle) {
 
     opener.addEventListener('click', ()=>{
     
-        console.log(check);
 
         if (smallWidth < 400) {
             if(check){
-            console.log('sono nel primo if');
             opener.style.transform = 'rotate(45deg)';
             check=false;
             movedDivs.forEach((moved, i)=>{
@@ -80,7 +78,6 @@ if (circle) {
         }else{
 
             if(check){
-                console.log('sono nel secondo if');
                 opener.style.transform = 'rotate(45deg)';
                 check=false;
                 movedDivs.forEach((moved, i)=>{
